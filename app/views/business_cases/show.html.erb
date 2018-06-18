@@ -1,0 +1,64 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Client location:</strong>
+  <%= @business_case.client_location %>
+</p>
+
+<p>
+  <strong>Client industry:</strong>
+  <%= @business_case.client_industry %>
+</p>
+
+<p>
+  <strong>Client size:</strong>
+  <%= @business_case.client_size %>
+</p>
+
+<p>
+  <strong>User expertise:</strong>
+  <%= @business_case.user_expertise %>
+</p>
+
+<p>
+  <strong>Client problem:</strong>
+  <%= @business_case.client_problem %>
+</p>
+
+<p>
+  <strong>User methodology:</strong>
+  <%= @business_case.user_methodology %>
+</p>
+
+<p>
+  <strong>Client results:</strong>
+  <%= @business_case.client_results %>
+</p>
+
+<p>
+  <strong>Client comments:</strong>
+  <%= @business_case.client_comments %>
+</p>
+
+<p>
+  <strong>User link:</strong>
+  <%= @business_case.user_link %>
+</p>
+
+<p>
+  <strong>Client comments validated:</strong>
+  <%= @business_case.client_comments_validated %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @business_case.title %>
+</p>
+
+<p>
+  <strong>Client position:</strong>
+  <%= @business_case.client_position %>
+</p>
+
+<%= link_to 'Edit', edit_business_case_path(@business_case) %> |
+<%= link_to 'Back', business_cases_path %>

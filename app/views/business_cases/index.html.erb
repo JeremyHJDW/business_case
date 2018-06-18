@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Business Cases</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Client location</th>
+      <th>Client industry</th>
+      <th>Client size</th>
+      <th>User expertise</th>
+      <th>Client problem</th>
+      <th>User methodology</th>
+      <th>Client results</th>
+      <th>Client comments</th>
+      <th>User link</th>
+      <th>Client comments validated</th>
+      <th>Title</th>
+      <th>Client position</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @business_cases.each do |business_case| %>
+      <tr>
+        <td><%= business_case.client_location %></td>
+        <td><%= business_case.client_industry %></td>
+        <td><%= business_case.client_size %></td>
+        <td><%= business_case.user_expertise %></td>
+        <td><%= business_case.client_problem %></td>
+        <td><%= business_case.user_methodology %></td>
+        <td><%= business_case.client_results %></td>
+        <td><%= business_case.client_comments %></td>
+        <td><%= business_case.user_link %></td>
+        <td><%= business_case.client_comments_validated %></td>
+        <td><%= business_case.title %></td>
+        <td><%= business_case.client_position %></td>
+        <td><%= link_to 'Show', business_case %></td>
+        <td><%= link_to 'Edit', edit_business_case_path(business_case) %></td>
+        <td><%= link_to 'Destroy', business_case, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Business Case', new_business_case_path %>

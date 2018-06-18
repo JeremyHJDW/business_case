@@ -1,0 +1,529 @@
+Started GET "/" for 127.0.0.1 at 2018-06-18 15:44:44 +0200
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/elikhan/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/railties-5.1.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/elikhan/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/railties-5.1.6/lib/rails/templates/rails/welcome/index.html.erb (2.0ms)
+Completed 200 OK in 136ms (Views: 4.6ms)
+
+
+Started GET "/business_cases" for 127.0.0.1 at 2018-06-18 16:13:00 +0200
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.1.6) lib/active_record/migration.rb:576:in `check_pending!'
+activerecord (5.1.6) lib/active_record/migration.rb:553:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.6) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.6) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (414.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (131.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateBusinessCases (20180618140634)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "business_cases" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "location" varchar, "industry" varchar, "corporate_size" varchar, "expertise" varchar, "client_problem" text, "methodology" text, "results" text, "client_comments" text, "link" text, "client_comments_validated" boolean, "title" varchar, "position" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180618140634"]]
+  [1m[35m (120.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-06-18 14:14:44.549511"], ["updated_at", "2018-06-18 14:14:44.549511"]]
+  [1m[35m (79.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2018-06-18 16:15:14 +0200
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/elikhan/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/railties-5.1.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/elikhan/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/railties-5.1.6/lib/rails/templates/rails/welcome/index.html.erb (2.4ms)
+Completed 200 OK in 12ms (Views: 5.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/business_cases" for 127.0.0.1 at 2018-06-18 16:15:22 +0200
+Processing by BusinessCasesController#index as HTML
+  Rendering business_cases/index.html.erb within layouts/application
+  [1m[36mBusinessCase Load (0.2ms)[0m  [1m[34mSELECT "business_cases".* FROM "business_cases"[0m
+  Rendered business_cases/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 1020ms (Views: 1016.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/business_cases/new" for 127.0.0.1 at 2018-06-18 16:15:47 +0200
+Processing by BusinessCasesController#new as HTML
+  Rendering business_cases/new.html.erb within layouts/application
+  Rendered business_cases/_form.html.erb (14.7ms)
+  Rendered business_cases/new.html.erb within layouts/application (15.8ms)
+Completed 200 OK in 60ms (Views: 28.9ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/business_cases" for 127.0.0.1 at 2018-06-18 16:16:50 +0200
+Processing by BusinessCasesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Rh1/s3GDeDIRqYUkTB73x2omd3i0ScrFpP5JOePRfTDn3EOhNKETX7uLPrrTrH9A15OqlwvwQs8DDU4t9kF4eA==", "business_case"=>{"location"=>"Locc", "industry"=>"Indd", "corporate_size"=>"Corr", "expertise"=>"Exp", "client_problem"=>"Cliet", "methodology"=>"?eth", "results"=>"REs", "client_comments"=>"Lcie", "link"=>"Link", "client_comments_validated"=>"0", "title"=>"TITRE", "position"=>"Leader"}, "commit"=>"Create Business case"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "business_cases" ("location", "industry", "corporate_size", "expertise", "client_problem", "methodology", "results", "client_comments", "link", "client_comments_validated", "title", "position", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["location", "Locc"], ["industry", "Indd"], ["corporate_size", "Corr"], ["expertise", "Exp"], ["client_problem", "Cliet"], ["methodology", "?eth"], ["results", "REs"], ["client_comments", "Lcie"], ["link", "Link"], ["client_comments_validated", "f"], ["title", "TITRE"], ["position", "Leader"], ["created_at", "2018-06-18 14:16:50.929904"], ["updated_at", "2018-06-18 14:16:50.929904"]]
+  [1m[35m (179.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/business_cases/1
+Completed 302 Found in 186ms (ActiveRecord: 180.0ms)
+
+
+Started GET "/business_cases/1" for 127.0.0.1 at 2018-06-18 16:16:51 +0200
+Processing by BusinessCasesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBusinessCase Load (0.2ms)[0m  [1m[34mSELECT  "business_cases".* FROM "business_cases" WHERE "business_cases"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering business_cases/show.html.erb within layouts/application
+  Rendered business_cases/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 25ms (Views: 18.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/business_cases/1/edit" for 127.0.0.1 at 2018-06-18 16:17:02 +0200
+Processing by BusinessCasesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBusinessCase Load (0.3ms)[0m  [1m[34mSELECT  "business_cases".* FROM "business_cases" WHERE "business_cases"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering business_cases/edit.html.erb within layouts/application
+  Rendered business_cases/_form.html.erb (17.6ms)
+  Rendered business_cases/edit.html.erb within layouts/application (19.3ms)
+Completed 200 OK in 44ms (Views: 40.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/business_cases" for 127.0.0.1 at 2018-06-18 16:17:09 +0200
+Processing by BusinessCasesController#index as HTML
+  Rendering business_cases/index.html.erb within layouts/application
+  [1m[36mBusinessCase Load (0.4ms)[0m  [1m[34mSELECT "business_cases".* FROM "business_cases"[0m
+  Rendered business_cases/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 27ms (Views: 25.3ms | ActiveRecord: 0.4ms)
+
+
+  [1m[36mBusinessCase Load (0.1ms)[0m  [1m[34mSELECT  "business_cases".* FROM "business_cases" ORDER BY "business_cases"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mBusinessCase Load (0.3ms)[0m  [1m[34mSELECT  "business_cases".* FROM "business_cases" ORDER BY "business_cases"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+Started GET "/business_cases/1" for 127.0.0.1 at 2018-06-18 17:02:45 +0200
+Processing by BusinessCasesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBusinessCase Load (0.1ms)[0m  [1m[34mSELECT  "business_cases".* FROM "business_cases" WHERE "business_cases"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering business_cases/show.html.erb within layouts/application
+  Rendered business_cases/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 44ms (Views: 18.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/business_cases/1/edit" for 127.0.0.1 at 2018-06-18 17:04:23 +0200
+Processing by BusinessCasesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBusinessCase Load (0.2ms)[0m  [1m[34mSELECT  "business_cases".* FROM "business_cases" WHERE "business_cases"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering business_cases/edit.html.erb within layouts/application
+  Rendered business_cases/_form.html.erb (8.4ms)
+  Rendered business_cases/edit.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 27ms (Views: 25.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/business_cases/1/edit" for 127.0.0.1 at 2018-06-18 17:05:05 +0200
+Processing by BusinessCasesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBusinessCase Load (0.1ms)[0m  [1m[34mSELECT  "business_cases".* FROM "business_cases" WHERE "business_cases"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering business_cases/edit.html.erb within layouts/application
+  Rendered business_cases/_form.html.erb (5.3ms)
+  Rendered business_cases/edit.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 23ms (Views: 21.8ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/business_cases/1" for 127.0.0.1 at 2018-06-18 17:05:14 +0200
+Processing by BusinessCasesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"60sMN9IW1JP7UWL4S279GB3eDq38mDjmh8A/F1s14j5DQxpukDnOg46HAnj+R7547osOZ7YebdsZB8Wj5svAZA==", "business_case"=>{"location"=>"Location", "industry"=>"Indd", "corporate_size"=>"Corr", "expertise"=>"Exp", "client_problem"=>"Cliet", "methodology"=>"?eth", "results"=>"REs", "client_comments"=>"Lcie", "link"=>"Link", "client_comments_validated"=>"0", "title"=>"TITRE", "position"=>"Leader"}, "commit"=>"Update Business case", "id"=>"1"}
+  [1m[36mBusinessCase Load (0.1ms)[0m  [1m[34mSELECT  "business_cases".* FROM "business_cases" WHERE "business_cases"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "business_cases" SET "location" = ?, "updated_at" = ? WHERE "business_cases"."id" = ?[0m  [["location", "Location"], ["updated_at", "2018-06-18 15:05:14.491746"], ["id", 1]]
+  [1m[35m (166.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/business_cases/1
+Completed 302 Found in 171ms (ActiveRecord: 167.5ms)
+
+
+Started GET "/business_cases/1" for 127.0.0.1 at 2018-06-18 17:05:14 +0200
+Processing by BusinessCasesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBusinessCase Load (0.1ms)[0m  [1m[34mSELECT  "business_cases".* FROM "business_cases" WHERE "business_cases"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering business_cases/show.html.erb within layouts/application
+  Rendered business_cases/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 18ms (Views: 16.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/business_cases/1" for 127.0.0.1 at 2018-06-18 17:09:33 +0200
+Processing by BusinessCasesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBusinessCase Load (0.1ms)[0m  [1m[34mSELECT  "business_cases".* FROM "business_cases" WHERE "business_cases"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering business_cases/show.html.erb within layouts/application
+  Rendered business_cases/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 17ms (Views: 15.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/business_cases/1" for 127.0.0.1 at 2018-06-18 17:11:23 +0200
+Processing by BusinessCasesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBusinessCase Load (0.1ms)[0m  [1m[34mSELECT  "business_cases".* FROM "business_cases" WHERE "business_cases"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering business_cases/show.html.erb within layouts/application
+  Rendered business_cases/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 21ms (Views: 19.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/business_cases/1" for 127.0.0.1 at 2018-06-18 17:11:58 +0200
+Processing by BusinessCasesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBusinessCase Load (0.1ms)[0m  [1m[34mSELECT  "business_cases".* FROM "business_cases" WHERE "business_cases"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering business_cases/show.html.erb within layouts/application
+  Rendered business_cases/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 18ms (Views: 16.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/business_cases/1" for 127.0.0.1 at 2018-06-18 17:13:41 +0200
+Processing by BusinessCasesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBusinessCase Load (0.2ms)[0m  [1m[34mSELECT  "business_cases".* FROM "business_cases" WHERE "business_cases"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering business_cases/show.html.erb within layouts/application
+  Rendered business_cases/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 17ms (Views: 14.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/business_cases/1/edit" for 127.0.0.1 at 2018-06-18 17:13:44 +0200
+Processing by BusinessCasesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBusinessCase Load (0.1ms)[0m  [1m[34mSELECT  "business_cases".* FROM "business_cases" WHERE "business_cases"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering business_cases/edit.html.erb within layouts/application
+  Rendered business_cases/_form.html.erb (4.1ms)
+  Rendered business_cases/edit.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 20ms (Views: 18.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/business_cases/1/edit" for 127.0.0.1 at 2018-06-18 17:14:31 +0200
+Processing by BusinessCasesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBusinessCase Load (0.2ms)[0m  [1m[34mSELECT  "business_cases".* FROM "business_cases" WHERE "business_cases"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering business_cases/edit.html.erb within layouts/application
+  Rendered business_cases/_form.html.erb (7.0ms)
+  Rendered business_cases/edit.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 33ms (Views: 30.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/business_cases/1" for 127.0.0.1 at 2018-06-18 17:14:34 +0200
+Processing by BusinessCasesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBusinessCase Load (0.1ms)[0m  [1m[34mSELECT  "business_cases".* FROM "business_cases" WHERE "business_cases"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering business_cases/show.html.erb within layouts/application
+  Rendered business_cases/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 15ms (Views: 13.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/business_cases/1" for 127.0.0.1 at 2018-06-18 17:14:35 +0200
+Processing by BusinessCasesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBusinessCase Load (0.2ms)[0m  [1m[34mSELECT  "business_cases".* FROM "business_cases" WHERE "business_cases"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering business_cases/show.html.erb within layouts/application
+  Rendered business_cases/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 19ms (Views: 16.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/business_cases/1/edit" for 127.0.0.1 at 2018-06-18 17:14:36 +0200
+Processing by BusinessCasesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBusinessCase Load (0.1ms)[0m  [1m[34mSELECT  "business_cases".* FROM "business_cases" WHERE "business_cases"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering business_cases/edit.html.erb within layouts/application
+  Rendered business_cases/_form.html.erb (4.1ms)
+  Rendered business_cases/edit.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 19ms (Views: 17.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/business_cases/new" for 127.0.0.1 at 2018-06-18 17:15:03 +0200
+Processing by BusinessCasesController#new as HTML
+  Rendering business_cases/new.html.erb within layouts/application
+  Rendered business_cases/_form.html.erb (4.3ms)
+  Rendered business_cases/new.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 21ms (Views: 19.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/business_cases/new" for 127.0.0.1 at 2018-06-18 17:20:17 +0200
+Processing by BusinessCasesController#new as HTML
+  Rendering business_cases/new.html.erb within layouts/application
+  Rendered business_cases/_form.html.erb (5.1ms)
+  Rendered business_cases/new.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 25ms (Views: 24.1ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (112.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "business_cases"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (111.7ms)[0m  [1m[35mCREATE TABLE "business_cases" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "location" varchar, "industry" varchar, "corporate_size" varchar, "expertise" varchar, "client_problem" text, "methodology" text, "results" text, "client_comments" text, "link" text, "client_comments_validated" boolean, "title" varchar, "position" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "business_cases"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (117.1ms)[0m  [1m[35mCREATE TABLE "business_cases" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "location" varchar, "industry" varchar, "corporate_size" varchar, "expertise" varchar, "client_problem" text, "methodology" text, "results" text, "client_comments" text, "link" text, "client_comments_validated" boolean, "title" varchar, "position" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (109.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (103.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20180618140634)[0m
+  [1m[35m (144.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-06-18 15:25:55.229031"], ["updated_at", "2018-06-18 15:25:55.229031"]]
+  [1m[35m (76.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = ?, "updated_at" = ? WHERE "ar_internal_metadata"."key" = ?[0m  [["value", "test"], ["updated_at", "2018-06-18 15:25:55.308491"], ["key", "environment"]]
+  [1m[35m (112.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/business_cases/new" for 127.0.0.1 at 2018-06-18 17:26:12 +0200
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BusinessCasesController#new as HTML
+  Rendering business_cases/new.html.erb within layouts/application
+  Rendered business_cases/_form.html.erb (3.4ms)
+  Rendered business_cases/new.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 18ms (Views: 17.2ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateBusinessCases (20180618140634)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE "business_cases"[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20180618140634"]]
+  [1m[35m (126.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (113.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (0)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (100.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (0)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = ?, "updated_at" = ? WHERE "ar_internal_metadata"."key" = ?[0m  [["value", "development"], ["updated_at", "2018-06-18 15:28:02.660781"], ["key", "environment"]]
+  [1m[35m (112.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = ?, "updated_at" = ? WHERE "ar_internal_metadata"."key" = ?[0m  [["value", "test"], ["updated_at", "2018-06-18 15:28:02.776890"], ["key", "environment"]]
+  [1m[35m (112.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateBusinessCases (20180618140634)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "business_cases" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "client_location" varchar, "client_industry" varchar, "client_size" varchar, "user_expertise" varchar, "client_problem" text, "user_methodology" text, "client_results" text, "client_comments" text, "user_link" text, "client_comments_validated" boolean, "title" varchar, "client_position" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180618140634"]]
+  [1m[35m (168.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/business_cases/new" for 127.0.0.1 at 2018-06-18 17:28:49 +0200
+Processing by BusinessCasesController#new as HTML
+  Rendering business_cases/new.html.erb within layouts/application
+  Rendered business_cases/_form.html.erb (4.8ms)
+  Rendered business_cases/new.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 42ms (Views: 25.4ms | ActiveRecord: 0.9ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateBusinessCases (20180618140634)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE "business_cases"[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20180618140634"]]
+  [1m[35m (154.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateBusinessCases (20180618140634)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "business_cases" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "client_location" varchar, "client_industry" varchar, "client_size" varchar, "user_expertise" varchar, "client_problem" text, "user_methodology" text, "client_results" text, "client_comments" text, "user_link" text, "client_comments_validated" boolean, "title" varchar, "client_position" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180618140634"]]
+  [1m[35m (127.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/business_cases/new" for 127.0.0.1 at 2018-06-18 17:30:36 +0200
+Processing by BusinessCasesController#new as HTML
+  Rendering business_cases/new.html.erb within layouts/application
+  Rendered business_cases/_form.html.erb (4.8ms)
+  Rendered business_cases/new.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 35ms (Views: 18.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/business_cases/new" for 127.0.0.1 at 2018-06-18 17:30:38 +0200
+Processing by BusinessCasesController#new as HTML
+  Rendering business_cases/new.html.erb within layouts/application
+  Rendered business_cases/_form.html.erb (4.3ms)
+  Rendered business_cases/new.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 21ms (Views: 20.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/business_cases/new" for 127.0.0.1 at 2018-06-18 17:31:44 +0200
+Processing by BusinessCasesController#new as HTML
+  Rendering business_cases/new.html.erb within layouts/application
+  Rendered business_cases/_form.html.erb (4.6ms)
+  Rendered business_cases/new.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 33ms (Views: 17.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/business_cases/new" for 127.0.0.1 at 2018-06-18 17:32:35 +0200
+Processing by BusinessCasesController#new as HTML
+  Rendering business_cases/new.html.erb within layouts/application
+  Rendered business_cases/_form.html.erb (4.0ms)
+  Rendered business_cases/new.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 20ms (Views: 18.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/business_cases/new" for 127.0.0.1 at 2018-06-18 17:33:16 +0200
+Processing by BusinessCasesController#new as HTML
+  Rendering business_cases/new.html.erb within layouts/application
+  Rendered business_cases/_form.html.erb (4.3ms)
+  Rendered business_cases/new.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 21ms (Views: 19.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/business_cases/new" for 127.0.0.1 at 2018-06-18 17:35:59 +0200
+Processing by BusinessCasesController#new as HTML
+  Rendering business_cases/new.html.erb within layouts/application
+  Rendered business_cases/_form.html.erb (5.0ms)
+  Rendered business_cases/new.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 32ms (Views: 30.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/business_cases/new" for 127.0.0.1 at 2018-06-18 17:42:41 +0200
+Processing by BusinessCasesController#new as HTML
+  Rendering business_cases/new.html.erb within layouts/application
+  Rendered business_cases/_form.html.erb (12.9ms)
+  Rendered business_cases/new.html.erb within layouts/application (14.3ms)
+Completed 200 OK in 39ms (Views: 37.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/business_cases/new" for 127.0.0.1 at 2018-06-18 17:43:34 +0200
+Processing by BusinessCasesController#new as HTML
+  Rendering business_cases/new.html.erb within layouts/application
+  Rendered business_cases/_form.html.erb (4.8ms)
+  Rendered business_cases/new.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 20ms (Views: 19.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/business_cases/new" for 127.0.0.1 at 2018-06-18 17:44:55 +0200
+Processing by BusinessCasesController#new as HTML
+  Rendering business_cases/new.html.erb within layouts/application
+  Rendered business_cases/_form.html.erb (7.9ms)
+  Rendered business_cases/new.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 23ms (Views: 21.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/business_cases/1/edit" for 127.0.0.1 at 2018-06-18 17:54:27 +0200
+Processing by BusinessCasesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBusinessCase Load (0.3ms)[0m  [1m[34mSELECT  "business_cases".* FROM "business_cases" WHERE "business_cases"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find BusinessCase with 'id'=1):
+  
+app/controllers/business_cases_controller.rb:59:in `set_business_case'
+Started GET "/business_cases" for 127.0.0.1 at 2018-06-18 17:54:57 +0200
+Processing by BusinessCasesController#index as HTML
+  Rendering business_cases/index.html.erb within layouts/application
+  [1m[36mBusinessCase Load (0.2ms)[0m  [1m[34mSELECT "business_cases".* FROM "business_cases"[0m
+  Rendered business_cases/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 16ms (Views: 14.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/business_cases/new" for 127.0.0.1 at 2018-06-18 17:55:02 +0200
+Processing by BusinessCasesController#new as HTML
+  Rendering business_cases/new.html.erb within layouts/application
+  Rendered business_cases/_form.html.erb (5.6ms)
+  Rendered business_cases/new.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 19ms (Views: 18.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/business_cases" for 127.0.0.1 at 2018-06-18 17:55:07 +0200
+Processing by BusinessCasesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EC9v5OkyTfllXhS0cxsS8jve8QGbAaWpQiRR67ekbE+x7lP2rBAmlM98ryrsqZp1hmss7iS4LaPl11b/ojRpBw==", "business_case"=>{"title"=>"dfghj", "client_location"=>"", "client_industry"=>"", "client_size"=>"", "client_position"=>"", "user_expertise"=>"", "client_problem"=>"", "user_methodology"=>"", "client_results"=>"", "client_comments"=>"", "user_link"=>""}, "commit"=>"Créer le business case"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "business_cases" ("client_location", "client_industry", "client_size", "user_expertise", "client_problem", "user_methodology", "client_results", "client_comments", "user_link", "title", "client_position", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["client_location", ""], ["client_industry", ""], ["client_size", ""], ["user_expertise", ""], ["client_problem", ""], ["user_methodology", ""], ["client_results", ""], ["client_comments", ""], ["user_link", ""], ["title", "dfghj"], ["client_position", ""], ["created_at", "2018-06-18 15:55:07.763104"], ["updated_at", "2018-06-18 15:55:07.763104"]]
+  [1m[35m (214.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/business_cases/1
+Completed 302 Found in 219ms (ActiveRecord: 215.4ms)
+
+
+Started GET "/business_cases/1" for 127.0.0.1 at 2018-06-18 17:55:07 +0200
+Processing by BusinessCasesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBusinessCase Load (0.1ms)[0m  [1m[34mSELECT  "business_cases".* FROM "business_cases" WHERE "business_cases"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering business_cases/show.html.erb within layouts/application
+  Rendered business_cases/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 17ms (Views: 15.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/business_cases/1/edit" for 127.0.0.1 at 2018-06-18 17:55:24 +0200
+Processing by BusinessCasesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBusinessCase Load (0.2ms)[0m  [1m[34mSELECT  "business_cases".* FROM "business_cases" WHERE "business_cases"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering business_cases/edit.html.erb within layouts/application
+  Rendered business_cases/_form.html.erb (9.9ms)
+  Rendered business_cases/edit.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 29ms (Views: 26.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/business_cases" for 127.0.0.1 at 2018-06-18 17:55:27 +0200
+Processing by BusinessCasesController#index as HTML
+  Rendering business_cases/index.html.erb within layouts/application
+  [1m[36mBusinessCase Load (0.3ms)[0m  [1m[34mSELECT "business_cases".* FROM "business_cases"[0m
+  Rendered business_cases/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 19ms (Views: 17.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/business_cases/1" for 127.0.0.1 at 2018-06-18 17:55:32 +0200
+Processing by BusinessCasesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBusinessCase Load (0.2ms)[0m  [1m[34mSELECT  "business_cases".* FROM "business_cases" WHERE "business_cases"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering business_cases/show.html.erb within layouts/application
+  Rendered business_cases/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 25ms (Views: 22.9ms | ActiveRecord: 0.2ms)
+
+

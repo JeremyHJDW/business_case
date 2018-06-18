@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  client_location: MyString
+  client_industry: MyString
+  client_size: MyString
+  user_expertise: MyString
+  client_problem: MyText
+  user_methodology: MyText
+  client_results: MyText
+  client_comments: MyText
+  user_link: MyText
+  client_comments_validated: false
+  title: MyString
+  client_position: MyString
+
+two:
+  client_location: MyString
+  client_industry: MyString
+  client_size: MyString
+  user_expertise: MyString
+  client_problem: MyText
+  user_methodology: MyText
+  client_results: MyText
+  client_comments: MyText
+  user_link: MyText
+  client_comments_validated: false
+  title: MyString
+  client_position: MyString
