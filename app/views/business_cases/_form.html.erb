@@ -21,27 +21,27 @@
 
   <div class="field">
     <%= form.label "Localisation du client" %>
-    <%= form.text_field :client_location, id: :business_case_client_location %>
+    <%= form.select :client_location, options_for_select(BusinessCase.client_locations_list, business_case.client_location) %>
   </div>
 
   <div class="field">
     <%= form.label "Industrie du client" %>
-    <%= form.text_field :client_industry, id: :business_case_client_industry %>
+    <%= form.select :client_industry, options_for_select(BusinessCase.client_industries_list, business_case.client_industry) %>
   </div>
 
   <div class="field">
     <%= form.label "Taille d'entreprise cliente" %>
-    <%= form.text_field :client_size, id: :business_case_client_size %>
+    <%= form.select :client_size, options_for_select(BusinessCase.client_sizes_list, business_case.client_size) %>
   </div>
 
   <div class="field">
     <%= form.label "Fonction de l'interlocuteur client" %>
-    <%= form.text_field :client_position, id: :business_case_client_position %>
+    <%= form.select :client_position, options_for_select(BusinessCase.client_positions_list, business_case.client_position) %>
   </div>
 
   <div class="field">
     <%= form.label "Expertise du consultant" %>
-    <%= form.text_field :user_expertise, id: :business_case_user_expertise %>
+    <%= form.select :user_expertise, options_for_select(BusinessCase.user_expertises_list, business_case.user_expertise) %>
   </div>
 
   <div class="field">

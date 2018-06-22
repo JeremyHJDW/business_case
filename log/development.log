@@ -527,3 +527,515 @@ Processing by BusinessCasesController#show as HTML
 Completed 200 OK in 25ms (Views: 22.9ms | ActiveRecord: 0.2ms)
 
 
+Started GET "/business_cases/1" for 127.0.0.1 at 2018-06-22 10:55:44 +0200
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BusinessCasesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBusinessCase Load (0.4ms)[0m  [1m[34mSELECT  "business_cases".* FROM "business_cases" WHERE "business_cases"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering business_cases/show.html.erb within layouts/application
+  Rendered business_cases/show.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 503ms (Views: 423.4ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/business_cases/2" for 127.0.0.1 at 2018-06-22 10:55:52 +0200
+Processing by BusinessCasesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mBusinessCase Load (0.3ms)[0m  [1m[34mSELECT  "business_cases".* FROM "business_cases" WHERE "business_cases"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find BusinessCase with 'id'=2):
+  
+app/controllers/business_cases_controller.rb:59:in `set_business_case'
+Started GET "/business_cases/new" for 127.0.0.1 at 2018-06-22 10:56:45 +0200
+Processing by BusinessCasesController#new as HTML
+  Rendering business_cases/new.html.erb within layouts/application
+  Rendered business_cases/_form.html.erb (89.4ms)
+  Rendered business_cases/new.html.erb within layouts/application (100.2ms)
+Completed 200 OK in 129ms (Views: 116.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/business_cases/new" for 127.0.0.1 at 2018-06-22 11:13:53 +0200
+Processing by BusinessCasesController#new as HTML
+  Rendering business_cases/new.html.erb within layouts/application
+  Rendered business_cases/_form.html.erb (9.3ms)
+  Rendered business_cases/new.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 42ms (Views: 39.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/business_cases/new" for 127.0.0.1 at 2018-06-22 11:14:07 +0200
+Processing by BusinessCasesController#new as HTML
+  Rendering business_cases/new.html.erb within layouts/application
+  Rendered business_cases/_form.html.erb (12.1ms)
+  Rendered business_cases/new.html.erb within layouts/application (13.7ms)
+Completed 200 OK in 52ms (Views: 50.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/business_cases" for 127.0.0.1 at 2018-06-22 11:14:30 +0200
+Processing by BusinessCasesController#index as HTML
+  Rendering business_cases/index.html.erb within layouts/application
+  [1m[36mBusinessCase Load (0.3ms)[0m  [1m[34mSELECT "business_cases".* FROM "business_cases"[0m
+  Rendered business_cases/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 27ms (Views: 15.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/business_cases/new" for 127.0.0.1 at 2018-06-22 11:14:35 +0200
+Processing by BusinessCasesController#new as HTML
+  Rendering business_cases/new.html.erb within layouts/application
+  Rendered business_cases/_form.html.erb (10.2ms)
+  Rendered business_cases/new.html.erb within layouts/application (12.1ms)
+Completed 200 OK in 29ms (Views: 27.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/business_cases/new" for 127.0.0.1 at 2018-06-22 11:16:10 +0200
+Processing by BusinessCasesController#new as HTML
+  Rendering business_cases/new.html.erb within layouts/application
+  Rendered business_cases/_form.html.erb (23.1ms)
+  Rendered business_cases/new.html.erb within layouts/application (24.4ms)
+Completed 200 OK in 42ms (Views: 40.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/business_cases/new" for 127.0.0.1 at 2018-06-22 11:16:21 +0200
+Processing by BusinessCasesController#new as HTML
+  Rendering business_cases/new.html.erb within layouts/application
+  Rendered business_cases/_form.html.erb (7.5ms)
+  Rendered business_cases/new.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 34ms (Views: 32.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/business_cases/new" for 127.0.0.1 at 2018-06-22 11:30:53 +0200
+Processing by BusinessCasesController#new as HTML
+  Rendering business_cases/new.html.erb within layouts/application
+  Rendered business_cases/_form.html.erb (4.1ms)
+  Rendered business_cases/new.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 18ms (Views: 17.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/business_cases/new" for 127.0.0.1 at 2018-06-22 11:31:29 +0200
+Processing by BusinessCasesController#new as HTML
+  Rendering business_cases/new.html.erb within layouts/application
+  Rendered business_cases/_form.html.erb (3.9ms)
+  Rendered business_cases/new.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 18ms (Views: 17.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/business_cases" for 127.0.0.1 at 2018-06-22 11:31:42 +0200
+Processing by BusinessCasesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fJIHpo05dV/tqP98v6RKusc3Cil9qdakQxM6xmt18FrahdRVmxh9i2kY4Mtv/e389VP346NXNuir+xB1ruXL0Q==", "business_case"=>{"title"=>"t1", "client_location"=>"deux", "client_industry"=>"", "client_size"=>"", "client_position"=>"", "user_expertise"=>"", "client_problem"=>"", "user_methodology"=>"", "client_results"=>"", "client_comments"=>"", "user_link"=>""}, "commit"=>"Créer le business case"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (21.0ms)[0m  [1m[32mINSERT INTO "business_cases" ("client_location", "client_industry", "client_size", "user_expertise", "client_problem", "user_methodology", "client_results", "client_comments", "user_link", "title", "client_position", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["client_location", "deux"], ["client_industry", ""], ["client_size", ""], ["user_expertise", ""], ["client_problem", ""], ["user_methodology", ""], ["client_results", ""], ["client_comments", ""], ["user_link", ""], ["title", "t1"], ["client_position", ""], ["created_at", "2018-06-22 09:31:42.944518"], ["updated_at", "2018-06-22 09:31:42.944518"]]
+  [1m[35m (218.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/business_cases/2
+Completed 302 Found in 244ms (ActiveRecord: 240.0ms)
+
+
+Started GET "/business_cases/2" for 127.0.0.1 at 2018-06-22 11:31:43 +0200
+Processing by BusinessCasesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mBusinessCase Load (0.2ms)[0m  [1m[34mSELECT  "business_cases".* FROM "business_cases" WHERE "business_cases"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering business_cases/show.html.erb within layouts/application
+  Rendered business_cases/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 14ms (Views: 11.7ms | ActiveRecord: 0.2ms)
+
+
+  [1m[36mBusinessCase Load (0.2ms)[0m  [1m[34mSELECT  "business_cases".* FROM "business_cases" ORDER BY "business_cases"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mBusinessCase Load (0.2ms)[0m  [1m[34mSELECT  "business_cases".* FROM "business_cases" ORDER BY "business_cases"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mBusinessCase Load (0.9ms)[0m  [1m[34mSELECT  "business_cases".* FROM "business_cases" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mBusinessCase Load (0.3ms)[0m  [1m[34mSELECT  "business_cases".* FROM "business_cases" ORDER BY "business_cases"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mBusinessCase Load (0.2ms)[0m  [1m[34mSELECT  "business_cases".* FROM "business_cases" ORDER BY "business_cases"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mBusinessCase Load (0.2ms)[0m  [1m[34mSELECT  "business_cases".* FROM "business_cases" ORDER BY "business_cases"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mBusinessCase Load (0.1ms)[0m  [1m[34mSELECT  "business_cases".* FROM "business_cases" ORDER BY "business_cases"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mBusinessCase Load (0.2ms)[0m  [1m[34mSELECT  "business_cases".* FROM "business_cases" ORDER BY "business_cases"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+Started GET "/business_cases/2" for 127.0.0.1 at 2018-06-22 11:56:20 +0200
+Processing by BusinessCasesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mBusinessCase Load (0.2ms)[0m  [1m[34mSELECT  "business_cases".* FROM "business_cases" WHERE "business_cases"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering business_cases/show.html.erb within layouts/application
+  Rendered business_cases/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 38ms (Views: 13.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/business_cases" for 127.0.0.1 at 2018-06-22 11:56:24 +0200
+Processing by BusinessCasesController#index as HTML
+  Rendering business_cases/index.html.erb within layouts/application
+  [1m[36mBusinessCase Load (0.2ms)[0m  [1m[34mSELECT "business_cases".* FROM "business_cases"[0m
+  Rendered business_cases/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 16ms (Views: 15.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/business_cases/new" for 127.0.0.1 at 2018-06-22 11:56:26 +0200
+Processing by BusinessCasesController#new as HTML
+  Rendering business_cases/new.html.erb within layouts/application
+  Rendered business_cases/_form.html.erb (6.3ms)
+  Rendered business_cases/new.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 21ms (Views: 20.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/business_cases/new" for 127.0.0.1 at 2018-06-22 12:00:48 +0200
+Processing by BusinessCasesController#new as HTML
+  Rendering business_cases/new.html.erb within layouts/application
+  Rendered business_cases/_form.html.erb (4.6ms)
+  Rendered business_cases/new.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 40ms (Views: 24.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/business_cases/new" for 127.0.0.1 at 2018-06-22 12:05:15 +0200
+Processing by BusinessCasesController#new as HTML
+  Rendering business_cases/new.html.erb within layouts/application
+  Rendered business_cases/_form.html.erb (5.8ms)
+  Rendered business_cases/new.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 34ms (Views: 18.6ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/business_cases" for 127.0.0.1 at 2018-06-22 12:05:57 +0200
+Processing by BusinessCasesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7AEbxkU2nxDb50dn9bD3NEtbmRnHdqoTxXJq73D3fQ1KFsg1UxeXxF9XWNAl6VByeT9k0xmISl8tmkBctWdGhg==", "business_case"=>{"title"=>"BizCas avec listes", "client_location"=>"Europe", "client_industry"=>"Immobilier", "client_corporate_size"=>"10-50m", "client_position"=>"CFO", "user_expertise"=>"Organisation", "client_problem"=>"", "user_methodology"=>"", "client_results"=>"", "client_comments"=>"", "user_link"=>""}, "commit"=>"Créer le business case"}
+Unpermitted parameter: :client_corporate_size
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "business_cases" ("client_location", "client_industry", "user_expertise", "client_problem", "user_methodology", "client_results", "client_comments", "user_link", "title", "client_position", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["client_location", "Europe"], ["client_industry", "Immobilier"], ["user_expertise", "Organisation"], ["client_problem", ""], ["user_methodology", ""], ["client_results", ""], ["client_comments", ""], ["user_link", ""], ["title", "BizCas avec listes"], ["client_position", "CFO"], ["created_at", "2018-06-22 10:05:57.745686"], ["updated_at", "2018-06-22 10:05:57.745686"]]
+  [1m[35m (151.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/business_cases/3
+Completed 302 Found in 158ms (ActiveRecord: 151.9ms)
+
+
+Started GET "/business_cases/3" for 127.0.0.1 at 2018-06-22 12:05:57 +0200
+Processing by BusinessCasesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mBusinessCase Load (0.2ms)[0m  [1m[34mSELECT  "business_cases".* FROM "business_cases" WHERE "business_cases"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering business_cases/show.html.erb within layouts/application
+  Rendered business_cases/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 16ms (Views: 14.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/business_cases/3" for 127.0.0.1 at 2018-06-22 12:07:38 +0200
+Processing by BusinessCasesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mBusinessCase Load (0.2ms)[0m  [1m[34mSELECT  "business_cases".* FROM "business_cases" WHERE "business_cases"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering business_cases/show.html.erb within layouts/application
+  Rendered business_cases/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 36ms (Views: 12.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/business_cases" for 127.0.0.1 at 2018-06-22 12:07:48 +0200
+Processing by BusinessCasesController#index as HTML
+  Rendering business_cases/index.html.erb within layouts/application
+  [1m[36mBusinessCase Load (0.2ms)[0m  [1m[34mSELECT "business_cases".* FROM "business_cases"[0m
+  Rendered business_cases/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 16ms (Views: 14.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/business_cases/new" for 127.0.0.1 at 2018-06-22 12:07:50 +0200
+Processing by BusinessCasesController#new as HTML
+  Rendering business_cases/new.html.erb within layouts/application
+  Rendered business_cases/_form.html.erb (4.5ms)
+  Rendered business_cases/new.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 19ms (Views: 17.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/business_cases" for 127.0.0.1 at 2018-06-22 12:08:28 +0200
+Processing by BusinessCasesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NWsn9ykdyCfIGiOdm7kz1wwa3GX46IH3ILr8UC+f6EqUqhvlbD+jSmI4mAMEC7tQsa8BikdRCf2HSftEOg/tAg==", "business_case"=>{"title"=>"20180622 - 12:08 - BizCas", "client_location"=>"Europe", "client_industry"=>"Immobilier", "client_size"=>"50-250m", "client_position"=>"COO", "user_expertise"=>"Organisation", "client_problem"=>"", "user_methodology"=>"", "client_results"=>"", "client_comments"=>"", "user_link"=>""}, "commit"=>"Créer le business case"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "business_cases" ("client_location", "client_industry", "client_size", "user_expertise", "client_problem", "user_methodology", "client_results", "client_comments", "user_link", "title", "client_position", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["client_location", "Europe"], ["client_industry", "Immobilier"], ["client_size", "50-250m"], ["user_expertise", "Organisation"], ["client_problem", ""], ["user_methodology", ""], ["client_results", ""], ["client_comments", ""], ["user_link", ""], ["title", "20180622 - 12:08 - BizCas"], ["client_position", "COO"], ["created_at", "2018-06-22 10:08:28.837593"], ["updated_at", "2018-06-22 10:08:28.837593"]]
+  [1m[35m (147.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/business_cases/4
+Completed 302 Found in 152ms (ActiveRecord: 147.7ms)
+
+
+Started GET "/business_cases/4" for 127.0.0.1 at 2018-06-22 12:08:29 +0200
+Processing by BusinessCasesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mBusinessCase Load (0.2ms)[0m  [1m[34mSELECT  "business_cases".* FROM "business_cases" WHERE "business_cases"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering business_cases/show.html.erb within layouts/application
+  Rendered business_cases/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 21ms (Views: 18.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/business_cases/4/edit" for 127.0.0.1 at 2018-06-22 12:08:42 +0200
+Processing by BusinessCasesController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mBusinessCase Load (0.1ms)[0m  [1m[34mSELECT  "business_cases".* FROM "business_cases" WHERE "business_cases"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering business_cases/edit.html.erb within layouts/application
+  Rendered business_cases/_form.html.erb (5.5ms)
+  Rendered business_cases/edit.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 53ms (Views: 28.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/business_cases/4/edit" for 127.0.0.1 at 2018-06-22 12:11:59 +0200
+Processing by BusinessCasesController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mBusinessCase Load (0.1ms)[0m  [1m[34mSELECT  "business_cases".* FROM "business_cases" WHERE "business_cases"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering business_cases/edit.html.erb within layouts/application
+  Rendered business_cases/_form.html.erb (7.5ms)
+  Rendered business_cases/edit.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 26ms (Views: 24.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/business_cases/4" for 127.0.0.1 at 2018-06-22 12:12:04 +0200
+Processing by BusinessCasesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mBusinessCase Load (0.1ms)[0m  [1m[34mSELECT  "business_cases".* FROM "business_cases" WHERE "business_cases"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering business_cases/show.html.erb within layouts/application
+  Rendered business_cases/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 31ms (Views: 29.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/business_cases" for 127.0.0.1 at 2018-06-22 12:12:06 +0200
+Processing by BusinessCasesController#index as HTML
+  Rendering business_cases/index.html.erb within layouts/application
+  [1m[36mBusinessCase Load (0.2ms)[0m  [1m[34mSELECT "business_cases".* FROM "business_cases"[0m
+  Rendered business_cases/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 34ms (Views: 32.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/business_cases/new" for 127.0.0.1 at 2018-06-22 12:12:09 +0200
+Processing by BusinessCasesController#new as HTML
+  Rendering business_cases/new.html.erb within layouts/application
+  Rendered business_cases/_form.html.erb (8.3ms)
+  Rendered business_cases/new.html.erb within layouts/application (10.7ms)
+Completed 200 OK in 35ms (Views: 33.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/business_cases/new" for 127.0.0.1 at 2018-06-22 12:15:18 +0200
+Processing by BusinessCasesController#new as HTML
+  Rendering business_cases/new.html.erb within layouts/application
+  Rendered business_cases/_form.html.erb (6.0ms)
+  Rendered business_cases/new.html.erb within layouts/application (15.8ms)
+Completed 200 OK in 30ms (Views: 28.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/business_cases/new?social=facebook" for 127.0.0.1 at 2018-06-22 12:17:11 +0200
+Processing by BusinessCasesController#new as HTML
+  Parameters: {"social"=>"facebook"}
+  Rendering business_cases/new.html.erb within layouts/application
+  Rendered business_cases/_form.html.erb (4.4ms)
+  Rendered business_cases/new.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 20ms (Views: 19.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/business_cases/new?social=facebook" for 127.0.0.1 at 2018-06-22 12:21:29 +0200
+Processing by BusinessCasesController#new as HTML
+  Parameters: {"social"=>"facebook"}
+  Rendering business_cases/new.html.erb within layouts/application
+  Rendered business_cases/_form.html.erb (7.0ms)
+  Rendered business_cases/new.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 28ms (Views: 26.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/business_cases/new?social=facebook" for 127.0.0.1 at 2018-06-22 12:23:11 +0200
+Processing by BusinessCasesController#new as HTML
+  Parameters: {"social"=>"facebook"}
+  Rendering business_cases/new.html.erb within layouts/application
+  Rendered business_cases/_form.html.erb (12.0ms)
+  Rendered business_cases/new.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 45ms (Views: 26.7ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/business_cases" for 127.0.0.1 at 2018-06-22 12:23:19 +0200
+Processing by BusinessCasesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"txu4R3cj+wu3fJF//5hhZEjLhQCmta5RzLJjsSDs670RDGu0YQLz3zPMjsgvwcYieq94ynhLTh0kWkkC5XzQNg==", "business_case"=>{"title"=>"fghj", "client_location"=>"France", "client_industry"=>"Agro-alimentaire et boissons", "client_size"=>"0-1m", "client_position"=>"CEO", "user_expertise"=>"Finance", "client_problem"=>"", "user_methodology"=>"", "client_results"=>"", "client_comments"=>"", "user_link"=>""}, "commit"=>"Créer le business case"}
+Completed 500 Internal Server Error in 34367ms (ActiveRecord: 0.0ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/business_cases_controller.rb:26:in `create'
+Started GET "/business_cases" for 127.0.0.1 at 2018-06-22 12:24:02 +0200
+Processing by BusinessCasesController#index as HTML
+  Rendering business_cases/index.html.erb within layouts/application
+  [1m[36mBusinessCase Load (1.0ms)[0m  [1m[34mSELECT "business_cases".* FROM "business_cases"[0m
+  Rendered business_cases/index.html.erb within layouts/application (45.0ms)
+Completed 200 OK in 216ms (Views: 206.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/business_cases/new" for 127.0.0.1 at 2018-06-22 12:24:05 +0200
+Processing by BusinessCasesController#new as HTML
+  Rendering business_cases/new.html.erb within layouts/application
+  Rendered business_cases/_form.html.erb (97.5ms)
+  Rendered business_cases/new.html.erb within layouts/application (108.6ms)
+Completed 200 OK in 292ms (Views: 283.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/business_cases" for 127.0.0.1 at 2018-06-22 12:24:11 +0200
+Processing by BusinessCasesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Pb83tTwW4OXNCvtJHgbs9O75CdwU8edNHmD2TTZpWtmcfguneTSLiGcoQNeBtGRzU0zUM6tIb0e5k/FZI/lfkQ==", "business_case"=>{"title"=>"é\"'(-è_", "client_location"=>"France", "client_industry"=>"Agro-alimentaire et boissons", "client_size"=>"0-1m", "client_position"=>"CEO", "user_expertise"=>"Finance", "client_problem"=>"", "user_methodology"=>"", "client_results"=>"", "client_comments"=>"", "user_link"=>""}, "commit"=>"Créer le business case"}
+Completed 500 Internal Server Error in 325764ms (ActiveRecord: 0.0ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/business_cases_controller.rb:26:in `create'
+Started GET "/business_cases" for 127.0.0.1 at 2018-06-22 12:29:42 +0200
+Processing by BusinessCasesController#index as HTML
+  Rendering business_cases/index.html.erb within layouts/application
+  [1m[36mBusinessCase Load (1.6ms)[0m  [1m[34mSELECT "business_cases".* FROM "business_cases"[0m
+  Rendered business_cases/index.html.erb within layouts/application (52.0ms)
+Completed 200 OK in 275ms (Views: 266.3ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/business_cases" for 127.0.0.1 at 2018-06-22 12:45:03 +0200
+Processing by BusinessCasesController#index as HTML
+  Rendering business_cases/index.html.erb within layouts/application
+  [1m[36mBusinessCase Load (7.6ms)[0m  [1m[34mSELECT "business_cases".* FROM "business_cases"[0m
+  Rendered business_cases/index.html.erb within layouts/application (256.2ms)
+Completed 200 OK in 587ms (Views: 559.1ms | ActiveRecord: 21.3ms)
+
+
+Started GET "/business_cases/new" for 127.0.0.1 at 2018-06-22 12:45:06 +0200
+Processing by BusinessCasesController#new as HTML
+  Rendering business_cases/new.html.erb within layouts/application
+  Rendered business_cases/_form.html.erb (159.5ms)
+  Rendered business_cases/new.html.erb within layouts/application (166.8ms)
+Completed 200 OK in 443ms (Views: 426.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/business_cases" for 127.0.0.1 at 2018-06-22 12:48:22 +0200
+Processing by BusinessCasesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IzjPLZlhNqJidB0zNVf2Wsh0+Y2Ewj/LYdOif2NHuvSC+fM/3ENdz8hWpq2q5X7ddcEkYjt7t8HGIKVrdte/vA==", "business_case"=>{"title"=>"COUCOU", "client_location"=>"Moyen-Orient", "client_industry"=>"Agro-alimentaire et boissons", "client_size"=>"0-1m", "client_position"=>"CEO", "user_expertise"=>"Finance", "client_problem"=>"", "user_methodology"=>"", "client_results"=>"", "client_comments"=>"", "user_link"=>""}, "commit"=>"Créer le business case"}
+  [1m[35m (0.7ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (6.3ms)[0m  [1m[32mINSERT INTO "business_cases" ("client_location", "client_industry", "client_size", "user_expertise", "client_problem", "user_methodology", "client_results", "client_comments", "user_link", "title", "client_position", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["client_location", "Moyen-Orient"], ["client_industry", "Agro-alimentaire et boissons"], ["client_size", "0-1m"], ["user_expertise", "Finance"], ["client_problem", ""], ["user_methodology", ""], ["client_results", ""], ["client_comments", ""], ["user_link", ""], ["title", "COUCOU"], ["client_position", "CEO"], ["created_at", "2018-06-22 10:48:22.661726"], ["updated_at", "2018-06-22 10:48:22.661726"]]
+  [1m[35m (69.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/business_cases/5
+Completed 302 Found in 184ms (ActiveRecord: 76.8ms)
+
+
+Started GET "/business_cases/5" for 127.0.0.1 at 2018-06-22 12:48:22 +0200
+Processing by BusinessCasesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mBusinessCase Load (1.9ms)[0m  [1m[34mSELECT  "business_cases".* FROM "business_cases" WHERE "business_cases"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering business_cases/show.html.erb within layouts/application
+  Rendered business_cases/show.html.erb within layouts/application (18.8ms)
+Completed 200 OK in 329ms (Views: 292.4ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/business_cases" for 127.0.0.1 at 2018-06-22 12:48:27 +0200
+Processing by BusinessCasesController#index as HTML
+  Rendering business_cases/index.html.erb within layouts/application
+  [1m[36mBusinessCase Load (1.7ms)[0m  [1m[34mSELECT "business_cases".* FROM "business_cases"[0m
+  Rendered business_cases/index.html.erb within layouts/application (83.0ms)
+Completed 200 OK in 381ms (Views: 363.6ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/business_cases/4" for 127.0.0.1 at 2018-06-22 12:48:34 +0200
+Processing by BusinessCasesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mBusinessCase Load (1.1ms)[0m  [1m[34mSELECT  "business_cases".* FROM "business_cases" WHERE "business_cases"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering business_cases/show.html.erb within layouts/application
+  Rendered business_cases/show.html.erb within layouts/application (17.2ms)
+Completed 200 OK in 318ms (Views: 292.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/business_cases/4/edit" for 127.0.0.1 at 2018-06-22 12:48:38 +0200
+Processing by BusinessCasesController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mBusinessCase Load (1.0ms)[0m  [1m[34mSELECT  "business_cases".* FROM "business_cases" WHERE "business_cases"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering business_cases/edit.html.erb within layouts/application
+  Rendered business_cases/_form.html.erb (172.9ms)
+  Rendered business_cases/edit.html.erb within layouts/application (181.5ms)
+Completed 200 OK in 471ms (Views: 452.2ms | ActiveRecord: 1.0ms)
+
+
+Started PATCH "/business_cases/4" for 127.0.0.1 at 2018-06-22 12:50:30 +0200
+Processing by BusinessCasesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rswyKHJauzBdYU3jnDcwsfqc5G9KSU1cePBKQFhHH6UPTblRfqYR92jqTjjDs4nKp8Jqyhr++g9DpayUnjOClw==", "business_case"=>{"title"=>"20180622 - 12:08 - BizCas", "client_location"=>"COUCOU IOSUGHSOIDUJNG", "client_industry"=>"Immobilier", "client_size"=>"50-250m", "client_position"=>"COO", "user_expertise"=>"Organisation", "client_problem"=>"", "user_methodology"=>"", "client_results"=>"", "client_comments"=>"", "user_link"=>""}, "commit"=>"Créer le business case", "id"=>"4"}
+  [1m[36mBusinessCase Load (1.1ms)[0m  [1m[34mSELECT  "business_cases".* FROM "business_cases" WHERE "business_cases"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (6.5ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (6.0ms)[0m  [1m[33mUPDATE "business_cases" SET "client_location" = ?, "updated_at" = ? WHERE "business_cases"."id" = ?[0m  [["client_location", "COUCOU IOSUGHSOIDUJNG"], ["updated_at", "2018-06-22 10:50:31.022622"], ["id", 4]]
+  [1m[35m (95.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/business_cases/4
+Completed 302 Found in 211ms (ActiveRecord: 109.2ms)
+
+
+Started GET "/business_cases/4" for 127.0.0.1 at 2018-06-22 12:50:31 +0200
+Processing by BusinessCasesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mBusinessCase Load (1.0ms)[0m  [1m[34mSELECT  "business_cases".* FROM "business_cases" WHERE "business_cases"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering business_cases/show.html.erb within layouts/application
+  Rendered business_cases/show.html.erb within layouts/application (16.8ms)
+Completed 200 OK in 333ms (Views: 307.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/business_cases/4/edit" for 127.0.0.1 at 2018-06-22 12:53:59 +0200
+Processing by BusinessCasesController#edit as HTML
+  Parameters: {"id"=>"4"}
+Completed 500 Internal Server Error in 2355ms
+
+
+  
+NoMethodError (undefined method `client_locations_list' for #<Class:0x00007fa6a2b88d78>):
+  
+app/models/business_case.rb:2:in `<class:BusinessCase>'
+app/models/business_case.rb:1:in `<top (required)>'
+app/controllers/business_cases_controller.rb:58:in `set_business_case'
+Started GET "/business_cases/4/edit" for 127.0.0.1 at 2018-06-22 12:54:27 +0200
+Processing by BusinessCasesController#edit as HTML
+  Parameters: {"id"=>"4"}
+Completed 500 Internal Server Error in 2430ms
+
+
+  
+NoMethodError (undefined method `client_locations_list' for #<Class:0x00007fa6a30513f0>):
+  
+app/models/business_case.rb:2:in `<class:BusinessCase>'
+app/models/business_case.rb:1:in `<top (required)>'
+app/controllers/business_cases_controller.rb:58:in `set_business_case'
+Started GET "/business_cases/4/edit" for 127.0.0.1 at 2018-06-22 12:54:58 +0200
+Processing by BusinessCasesController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mBusinessCase Load (1.6ms)[0m  [1m[34mSELECT  "business_cases".* FROM "business_cases" WHERE "business_cases"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering business_cases/edit.html.erb within layouts/application
+  Rendered business_cases/_form.html.erb (193.6ms)
+  Rendered business_cases/edit.html.erb within layouts/application (202.4ms)
+Completed 200 OK in 778ms (Views: 504.6ms | ActiveRecord: 14.8ms)
+
+
+Started PATCH "/business_cases/4" for 127.0.0.1 at 2018-06-22 12:55:30 +0200
+Processing by BusinessCasesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RIe+uu8sdvtUV88pJvp7kpq2rLiQ4T3QewzJue7PQaPikG1J+Q1+L9Dn0J72o9zUqNJRck4f3ZyT5OMKK196KA==", "business_case"=>{"title"=>"20180622 - 12:08 - BizCas", "client_location"=>"sdsfskk,kxmv,k", "client_industry"=>"Immobilier", "client_size"=>"50-250m", "client_position"=>"COO", "user_expertise"=>"Organisation", "client_problem"=>"", "user_methodology"=>"", "client_results"=>"", "client_comments"=>"", "user_link"=>""}, "commit"=>"Créer le business case", "id"=>"4"}
+  [1m[36mBusinessCase Load (1.3ms)[0m  [1m[34mSELECT  "business_cases".* FROM "business_cases" WHERE "business_cases"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.9ms)[0m  [1m[31mrollback transaction[0m
+  Rendering business_cases/edit.html.erb within layouts/application
+  Rendered business_cases/_form.html.erb (173.3ms)
+  Rendered business_cases/edit.html.erb within layouts/application (190.3ms)
+Completed 200 OK in 562ms (Views: 487.9ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/business_cases/4" for 127.0.0.1 at 2018-06-22 13:00:10 +0200
+Processing by BusinessCasesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mBusinessCase Load (2.4ms)[0m  [1m[34mSELECT  "business_cases".* FROM "business_cases" WHERE "business_cases"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering business_cases/show.html.erb within layouts/application
+  Rendered business_cases/show.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 615ms (Views: 329.1ms | ActiveRecord: 11.3ms)
+
+
+Started GET "/business_cases/4/edit" for 127.0.0.1 at 2018-06-22 13:00:14 +0200
+Processing by BusinessCasesController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mBusinessCase Load (1.1ms)[0m  [1m[34mSELECT  "business_cases".* FROM "business_cases" WHERE "business_cases"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering business_cases/edit.html.erb within layouts/application
+  Rendered business_cases/_form.html.erb (207.2ms)
+  Rendered business_cases/edit.html.erb within layouts/application (216.7ms)
+Completed 200 OK in 530ms (Views: 505.4ms | ActiveRecord: 1.1ms)
+
+
+Started PATCH "/business_cases/4" for 127.0.0.1 at 2018-06-22 13:02:08 +0200
+Processing by BusinessCasesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pic6wlPfNm8eGVSCFgRGwQyZst9wCQv/2whjKFZWt3kHprG7XyOcqCuSV1lJgP+6Ucc8eiC+vKzgXYX8kCIqSw==", "business_case"=>{"title"=>"20180622 - 12:08 - BizCas", "client_location"=>"retbhjgvfc", "client_industry"=>"efghj", "client_size"=>"kbhkjg", "client_position"=>"dtcfj", "user_expertise"=>"gjbh", "client_problem"=>"", "user_methodology"=>"", "client_results"=>"", "client_comments"=>"", "user_link"=>""}, "commit"=>"Créer le business case", "id"=>"4"}
+  [1m[36mBusinessCase Load (1.1ms)[0m  [1m[34mSELECT  "business_cases".* FROM "business_cases" WHERE "business_cases"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[31mrollback transaction[0m
+  Rendering business_cases/edit.html.erb within layouts/application
+  Rendered business_cases/_form.html.erb (211.0ms)
+  Rendered business_cases/edit.html.erb within layouts/application (221.7ms)
+Completed 200 OK in 684ms (Views: 517.5ms | ActiveRecord: 2.7ms)
+
+
