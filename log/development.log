@@ -1039,3 +1039,110 @@ Processing by BusinessCasesController#update as HTML
 Completed 200 OK in 684ms (Views: 517.5ms | ActiveRecord: 2.7ms)
 
 
+Started GET "/business_cases/4" for 127.0.0.1 at 2018-06-26 15:18:08 +0200
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BusinessCasesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mBusinessCase Load (0.3ms)[0m  [1m[34mSELECT  "business_cases".* FROM "business_cases" WHERE "business_cases"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering business_cases/show.html.erb within layouts/application
+  Rendered business_cases/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 167ms (Views: 102.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-26 15:19:50 +0200
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/elikhan/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/railties-5.1.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/elikhan/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/railties-5.1.6/lib/rails/templates/rails/welcome/index.html.erb (1.6ms)
+Completed 200 OK in 31ms (Views: 3.2ms)
+
+
+Started GET "/business_case" for 127.0.0.1 at 2018-06-26 15:20:10 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/business_case"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/business_cases" for 127.0.0.1 at 2018-06-26 15:20:29 +0200
+Processing by BusinessCasesController#index as HTML
+  Rendering business_cases/index.html.erb within layouts/application
+  [1m[36mBusinessCase Load (0.2ms)[0m  [1m[34mSELECT "business_cases".* FROM "business_cases"[0m
+  Rendered business_cases/index.html.erb within layouts/application (16.0ms)
+Completed 200 OK in 40ms (Views: 26.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/business_cases/5" for 127.0.0.1 at 2018-06-26 15:20:32 +0200
+Processing by BusinessCasesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mBusinessCase Load (0.2ms)[0m  [1m[34mSELECT  "business_cases".* FROM "business_cases" WHERE "business_cases"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering business_cases/show.html.erb within layouts/application
+  Rendered business_cases/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 13ms (Views: 10.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/business_cases/5/edit" for 127.0.0.1 at 2018-06-26 15:20:38 +0200
+Processing by BusinessCasesController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mBusinessCase Load (0.1ms)[0m  [1m[34mSELECT  "business_cases".* FROM "business_cases" WHERE "business_cases"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering business_cases/edit.html.erb within layouts/application
+  Rendered business_cases/edit.html.erb within layouts/application (208.3ms)
+Completed 500 Internal Server Error in 211ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `business_case' for #<#<Class:0x00007f5d3169c220>:0x00007f5d340105e8>
+Did you mean?  @business_case
+               business_case_url):
+    1: <h1>Editing Business Case</h1>
+    2: 
+    3: <%= render 'forn', business_case: business_case %>
+    4: 
+    5: <%= link_to 'Show', @business_case %> |
+    6: 
+  
+app/views/business_cases/edit.html.erb:3:in `_app_views_business_cases_edit_html_erb___468234096870750050_70019140585340'
+Started GET "/business_cases/5/edit" for 127.0.0.1 at 2018-06-26 15:21:10 +0200
+Processing by BusinessCasesController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mBusinessCase Load (0.1ms)[0m  [1m[34mSELECT  "business_cases".* FROM "business_cases" WHERE "business_cases"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering business_cases/edit.html.erb within layouts/application
+  Rendered business_cases/edit.html.erb within layouts/application (254.6ms)
+Completed 500 Internal Server Error in 257ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `business_case' for #<#<Class:0x00007f5d3169c220>:0x00007f5d389332e8>
+Did you mean?  @business_case
+               business_case_url):
+    1: <h1>Editing Business Case</h1>
+    2: 
+    3: <%= render 'form-partial', business_case: business_case %>
+    4: 
+    5: <%= link_to 'Show', @business_case %> |
+    6: 
+  
+app/views/business_cases/edit.html.erb:3:in `_app_views_business_cases_edit_html_erb___468234096870750050_70019178929660'
