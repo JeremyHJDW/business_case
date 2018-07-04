@@ -114,20 +114,10 @@ RSpec.describe BusinessCase, type: :model do
       subject.client_problem = "Pas assez de rentabilité"
       subject.client_results = "Il a fait x2 à la fin !!!"
 
-
-
-
       subject.valid?
       expect(subject).to be_valid
-
-
-
     end
-
-
-
-
+    
   end
-
 
 end

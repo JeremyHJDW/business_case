@@ -1218,3 +1218,105 @@ Processing by BusinessCasesController#create as HTML
 Completed 200 OK in 3912ms (Views: 19.3ms | ActiveRecord: 0.2ms)
 
 
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Started GET "/" for 127.0.0.1 at 2018-07-04 16:54:35 +0200
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BusinessCasesController#index as HTML
+  Rendering business_cases/index.html.erb within layouts/application
+  [1m[36mBusinessCase Load (0.2ms)[0m  [1m[34mSELECT "business_cases".* FROM "business_cases"[0m
+  Rendered business_cases/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 202ms (Views: 188.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/business_cases/1" for 127.0.0.1 at 2018-07-04 16:55:56 +0200
+Processing by BusinessCasesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBusinessCase Load (0.2ms)[0m  [1m[34mSELECT  "business_cases".* FROM "business_cases" WHERE "business_cases"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 404 Not Found in 16ms (ActiveRecord: 1.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find BusinessCase with 'id'=1):
+  
+app/controllers/business_cases_controller.rb:58:in `set_business_case'
+Started GET "/" for 127.0.0.1 at 2018-07-04 17:04:44 +0200
+Processing by BusinessCasesController#index as HTML
+  Rendering business_cases/index.html.erb within layouts/application
+  [1m[36mBusinessCase Load (0.2ms)[0m  [1m[34mSELECT "business_cases".* FROM "business_cases"[0m
+  Rendered business_cases/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 38ms (Views: 37.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-07-04 17:05:12 +0200
+Processing by BusinessCasesController#index as HTML
+  Rendering business_cases/index.html.erb within layouts/application
+  [1m[36mBusinessCase Load (0.2ms)[0m  [1m[34mSELECT "business_cases".* FROM "business_cases"[0m
+  Rendered business_cases/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 33ms (Views: 32.0ms | ActiveRecord: 0.2ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "business_cases" ("client_location", "client_industry", "client_size", "user_expertise", "client_problem", "user_methodology", "client_results", "title", "client_position", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["client_location", "Moyen-Orient"], ["client_industry", "Produits ménagers et de soin personnel"], ["client_size", "10-50m"], ["user_expertise", "Finance"], ["client_problem", "Pas assez de marges"], ["user_methodology", "Le flair et l'intuition"], ["client_results", "Au top !"], ["title", "Comment créer une appli en Rails ?"], ["client_position", "CMO"], ["created_at", "2018-07-04 15:16:15.192088"], ["updated_at", "2018-07-04 15:16:15.192088"]]
+  [1m[35m (115.2ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/" for 127.0.0.1 at 2018-07-04 17:16:30 +0200
+Processing by BusinessCasesController#index as HTML
+  Rendering business_cases/index.html.erb within layouts/application
+  [1m[36mBusinessCase Load (0.2ms)[0m  [1m[34mSELECT "business_cases".* FROM "business_cases"[0m
+  Rendered business_cases/index.html.erb within layouts/application (21.3ms)
+Completed 200 OK in 43ms (Views: 41.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/business_case" for 127.0.0.1 at 2018-07-04 17:17:58 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/business_case"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-07-04 17:18:56 +0200
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BusinessCasesController#index as HTML
+  Rendering business_cases/index.html.erb within layouts/application
+  [1m[36mBusinessCase Load (0.2ms)[0m  [1m[34mSELECT "business_cases".* FROM "business_cases"[0m
+  Rendered business_cases/index.html.erb within layouts/application (15.3ms)
+Completed 200 OK in 163ms (Views: 149.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-07-04 17:19:02 +0200
+Processing by BusinessCasesController#index as HTML
+  Rendering business_cases/index.html.erb within layouts/application
+  [1m[36mBusinessCase Load (0.2ms)[0m  [1m[34mSELECT "business_cases".* FROM "business_cases"[0m
+  Rendered business_cases/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 17ms (Views: 15.2ms | ActiveRecord: 0.2ms)
+
+
