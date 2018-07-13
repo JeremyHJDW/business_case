@@ -952,3 +952,843 @@ Migrating to CreateBusinessCases (20180618140634)
   [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
   [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
   [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "business_cases"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (138.6ms)[0m  [1m[35mCREATE TABLE "business_cases" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "client_location" varchar, "client_industry" varchar, "client_size" varchar, "user_expertise" varchar, "client_problem" text, "user_methodology" text, "client_results" text, "client_comments" text, "user_link" text, "client_comment_status" integer, "title" varchar, "client_position" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (132.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (115.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20180713140205)[0m
+  [1m[35m (184.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20180618140634),
+(20180713134056);
+
+[0m
+  [1m[35m (149.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "test"], ["created_at", "2018-07-13 14:16:35.375129"], ["updated_at", "2018-07-13 14:16:35.375129"]]
+  [1m[35m (113.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.8ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "business_cases" ("client_location", "client_industry", "client_size", "user_expertise", "client_problem", "user_methodology", "client_results", "client_comment_status", "title", "client_position", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["client_location", "Europe"], ["client_industry", "Pétrole et gaz"], ["client_size", "250-1000m"], ["user_expertise", "Finance"], ["client_problem", "Pas assez de rentabilité"], ["user_methodology", "L'instinct"], ["client_results", "Il a fait x2 à la fin !!!"], ["client_comment_status", 1], ["title", "Comment tester"], ["client_position", "DRH"], ["created_at", "2018-07-13 14:17:52.628116"], ["updated_at", "2018-07-13 14:17:52.628116"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "business_cases" ("client_location", "client_industry", "client_size", "user_expertise", "client_problem", "user_methodology", "client_results", "client_comment_status", "title", "client_position", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["client_location", "Amerique"], ["client_industry", "Technologie"], ["client_size", "0-1m"], ["user_expertise", "Organisation"], ["client_problem", "Pas assez de rentabilité"], ["user_methodology", "L'instinct"], ["client_results", "Il a fait x2 à la fin !!!"], ["client_comment_status", 1], ["title", "Comment tester"], ["client_position", "COO"], ["created_at", "2018-07-13 14:18:28.065788"], ["updated_at", "2018-07-13 14:18:28.065788"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "business_cases" ("client_location", "client_industry", "client_size", "user_expertise", "client_problem", "user_methodology", "client_results", "client_comment_status", "title", "client_position", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["client_location", "Europe"], ["client_industry", "Agro-alimentaire et boissons"], ["client_size", "250-1000m"], ["user_expertise", "Finance"], ["client_problem", "Pas assez de rentabilité"], ["user_methodology", "L'instinct"], ["client_results", "Il a fait x2 à la fin !!!"], ["client_comment_status", 1], ["title", "Comment tester"], ["client_position", "COO"], ["created_at", "2018-07-13 14:18:41.420142"], ["updated_at", "2018-07-13 14:18:41.420142"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (3.8ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "business_cases" ("client_location", "client_industry", "client_size", "user_expertise", "client_problem", "user_methodology", "client_results", "client_comment_status", "title", "client_position", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["client_location", "Amerique"], ["client_industry", "Banques"], ["client_size", "1-10m"], ["user_expertise", "Sales & Marketing"], ["client_problem", "Pas assez de rentabilité"], ["user_methodology", "L'instinct"], ["client_results", "Il a fait x2 à la fin !!!"], ["client_comment_status", 1], ["title", "Comment tester"], ["client_position", "CTO"], ["created_at", "2018-07-13 14:19:30.855715"], ["updated_at", "2018-07-13 14:19:30.855715"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Processing by BusinessCasesController#index as HTML
+  Rendering business_cases/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered business_cases/index.html.erb within layouts/application (0.2ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 14ms (Views: 5.5ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "business_cases" ("client_location", "client_industry", "client_size", "user_expertise", "client_problem", "user_methodology", "client_results", "title", "client_position", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["client_location", "Afrique"], ["client_industry", "Produits ménagers et de soin personnel"], ["client_size", ">1000m"], ["user_expertise", "Digital"], ["client_problem", "Pas assez de rentabilité"], ["user_methodology", "L'instinct"], ["client_results", "Il a fait x2 à la fin !!!"], ["title", "Comment tester"], ["client_position", "CTO"], ["created_at", "2018-07-13 14:51:56.675951"], ["updated_at", "2018-07-13 14:51:56.675951"]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "business_cases" ("client_location", "client_industry", "client_size", "user_expertise", "client_problem", "user_methodology", "client_results", "title", "client_position", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["client_location", "Afrique"], ["client_industry", "Pétrole et gaz"], ["client_size", "250-1000m"], ["user_expertise", "Sales & Marketing"], ["client_problem", "Pas assez de rentabilité"], ["user_methodology", "L'instinct"], ["client_results", "Il a fait x2 à la fin !!!"], ["title", "Comment tester"], ["client_position", "COO"], ["created_at", "2018-07-13 14:52:33.614817"], ["updated_at", "2018-07-13 14:52:33.614817"]]
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "business_cases" ("client_location", "client_industry", "client_size", "user_expertise", "client_problem", "user_methodology", "client_results", "title", "client_position", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["client_location", "Afrique"], ["client_industry", "Bâtiment et matériaux de construction"], ["client_size", ">1000m"], ["user_expertise", "Organisation"], ["client_problem", "Pas assez de rentabilité"], ["user_methodology", "L'instinct"], ["client_results", "Il a fait x2 à la fin !!!"], ["title", "Comment tester"], ["client_position", "CMO"], ["created_at", "2018-07-13 14:53:18.665033"], ["updated_at", "2018-07-13 14:53:18.665033"]]
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "business_cases" SET "client_comment_status" = ?, "updated_at" = ? WHERE "business_cases"."id" = ?[0m  [["client_comment_status", 0], ["updated_at", "2018-07-13 14:53:18.667172"], ["id", 1]]
+  [1m[35m (122.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Processing by BusinessCasesController#index as HTML
+  Rendering business_cases/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered business_cases/index.html.erb within layouts/application (0.5ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 8ms (Views: 6.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "business_cases" ("client_location", "client_industry", "client_size", "user_expertise", "client_problem", "user_methodology", "client_results", "title", "client_position", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["client_location", "Asie"], ["client_industry", "Assurance"], ["client_size", ">1000m"], ["user_expertise", "Organisation"], ["client_problem", "Pas assez de rentabilité"], ["user_methodology", "L'instinct"], ["client_results", "Il a fait x2 à la fin !!!"], ["title", "Comment tester"], ["client_position", "CEO"], ["created_at", "2018-07-13 14:55:36.768489"], ["updated_at", "2018-07-13 14:55:36.768489"]]
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "business_cases" SET "client_comment_status" = ?, "updated_at" = ? WHERE "business_cases"."id" = ?[0m  [["client_comment_status", 0], ["updated_at", "2018-07-13 14:55:36.770596"], ["id", 2]]
+  [1m[35m (105.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Processing by BusinessCasesController#index as HTML
+  Rendering business_cases/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered business_cases/index.html.erb within layouts/application (0.3ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 6ms (Views: 4.4ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "business_cases" ("client_location", "client_industry", "client_size", "user_expertise", "client_problem", "user_methodology", "client_results", "title", "client_position", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["client_location", "France"], ["client_industry", "Agro-alimentaire et boissons"], ["client_size", "250-1000m"], ["user_expertise", "Digital"], ["client_problem", "Pas assez de rentabilité"], ["user_methodology", "L'instinct"], ["client_results", "Il a fait x2 à la fin !!!"], ["title", "Comment tester"], ["client_position", "DRH"], ["created_at", "2018-07-13 14:56:03.394140"], ["updated_at", "2018-07-13 14:56:03.394140"]]
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "business_cases" SET "client_comment_status" = ?, "updated_at" = ? WHERE "business_cases"."id" = ?[0m  [["client_comment_status", 0], ["updated_at", "2018-07-13 14:56:03.396640"], ["id", 3]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by BusinessCasesController#index as HTML
+  Rendering business_cases/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered business_cases/index.html.erb within layouts/application (0.3ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "business_cases" ("client_location", "client_industry", "client_size", "user_expertise", "client_problem", "user_methodology", "client_results", "title", "client_position", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["client_location", "Amerique"], ["client_industry", "Biens et services industriels"], ["client_size", "0-1m"], ["user_expertise", "Strategie"], ["client_problem", "Pas assez de rentabilité"], ["user_methodology", "L'instinct"], ["client_results", "Il a fait x2 à la fin !!!"], ["title", "Comment tester"], ["client_position", "CTO"], ["created_at", "2018-07-13 14:56:03.410081"], ["updated_at", "2018-07-13 14:56:03.410081"]]
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "business_cases" SET "client_comment_status" = ?, "updated_at" = ? WHERE "business_cases"."id" = ?[0m  [["client_comment_status", 0], ["updated_at", "2018-07-13 14:56:03.412047"], ["id", 3]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "business_cases" ("client_location", "client_industry", "client_size", "user_expertise", "client_problem", "user_methodology", "client_results", "title", "client_position", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["client_location", "Asie"], ["client_industry", "Services aux collectivités"], ["client_size", "50-250m"], ["user_expertise", "Sales & Marketing"], ["client_problem", "Pas assez de rentabilité"], ["user_methodology", "L'instinct"], ["client_results", "Il a fait x2 à la fin !!!"], ["title", "Comment tester"], ["client_position", "CTO"], ["created_at", "2018-07-13 14:56:03.416153"], ["updated_at", "2018-07-13 14:56:03.416153"]]
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "business_cases" SET "client_comment_status" = ?, "updated_at" = ? WHERE "business_cases"."id" = ?[0m  [["client_comment_status", 0], ["updated_at", "2018-07-13 14:56:03.418085"], ["id", 3]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "business_cases" ("client_location", "client_industry", "client_size", "user_expertise", "client_problem", "user_methodology", "client_results", "title", "client_position", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["client_location", "Amerique"], ["client_industry", "Automobiles et équipementiers"], ["client_size", "50-250m"], ["user_expertise", "Finance"], ["client_problem", "Pas assez de rentabilité"], ["user_methodology", "L'instinct"], ["client_results", "Il a fait x2 à la fin !!!"], ["title", "Comment tester"], ["client_position", "CEO"], ["created_at", "2018-07-13 14:56:19.450714"], ["updated_at", "2018-07-13 14:56:19.450714"]]
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "business_cases" SET "client_comment_status" = ?, "updated_at" = ? WHERE "business_cases"."id" = ?[0m  [["client_comment_status", 0], ["updated_at", "2018-07-13 14:56:19.452505"], ["id", 3]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by BusinessCasesController#index as HTML
+  Rendering business_cases/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered business_cases/index.html.erb within layouts/application (0.2ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "business_cases" ("client_location", "client_industry", "client_size", "user_expertise", "client_problem", "user_methodology", "client_results", "title", "client_position", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["client_location", "Asie"], ["client_industry", "Banques"], ["client_size", ">1000m"], ["user_expertise", "Sales & Marketing"], ["client_problem", "Pas assez de rentabilité"], ["user_methodology", "L'instinct"], ["client_results", "Il a fait x2 à la fin !!!"], ["title", "Comment tester"], ["client_position", "CMO"], ["created_at", "2018-07-13 14:56:19.464916"], ["updated_at", "2018-07-13 14:56:19.464916"]]
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "business_cases" SET "client_comment_status" = ?, "updated_at" = ? WHERE "business_cases"."id" = ?[0m  [["client_comment_status", 0], ["updated_at", "2018-07-13 14:56:19.466700"], ["id", 3]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "business_cases" ("client_location", "client_industry", "client_size", "user_expertise", "client_problem", "user_methodology", "client_results", "title", "client_position", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["client_location", "Afrique"], ["client_industry", "Services aux collectivités"], ["client_size", "0-1m"], ["user_expertise", "Finance"], ["client_problem", "Pas assez de rentabilité"], ["user_methodology", "L'instinct"], ["client_results", "Il a fait x2 à la fin !!!"], ["title", "Comment tester"], ["client_position", "DRH"], ["created_at", "2018-07-13 14:56:19.470348"], ["updated_at", "2018-07-13 14:56:19.470348"]]
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "business_cases" SET "client_comment_status" = ?, "updated_at" = ? WHERE "business_cases"."id" = ?[0m  [["client_comment_status", 0], ["updated_at", "2018-07-13 14:56:19.472261"], ["id", 3]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "business_cases" ("client_location", "client_industry", "client_size", "user_expertise", "client_problem", "user_methodology", "client_results", "title", "client_position", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["client_location", "Afrique"], ["client_industry", "Services aux collectivités"], ["client_size", ">1000m"], ["user_expertise", "Finance"], ["client_problem", "Pas assez de rentabilité"], ["user_methodology", "L'instinct"], ["client_results", "Il a fait x2 à la fin !!!"], ["title", "Comment tester"], ["client_position", "CTO"], ["created_at", "2018-07-13 14:56:34.330256"], ["updated_at", "2018-07-13 14:56:34.330256"]]
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "business_cases" SET "client_comment_status" = ?, "updated_at" = ? WHERE "business_cases"."id" = ?[0m  [["client_comment_status", 0], ["updated_at", "2018-07-13 14:56:34.332315"], ["id", 3]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by BusinessCasesController#index as HTML
+  Rendering business_cases/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered business_cases/index.html.erb within layouts/application (0.2ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "business_cases" ("client_location", "client_industry", "client_size", "user_expertise", "client_problem", "user_methodology", "client_results", "title", "client_position", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["client_location", "Moyen-Orient"], ["client_industry", "Santé"], ["client_size", "1-10m"], ["user_expertise", "Strategie"], ["client_problem", "Pas assez de rentabilité"], ["user_methodology", "L'instinct"], ["client_results", "Il a fait x2 à la fin !!!"], ["title", "Comment tester"], ["client_position", "CEO"], ["created_at", "2018-07-13 14:56:34.343724"], ["updated_at", "2018-07-13 14:56:34.343724"]]
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "business_cases" SET "client_comment_status" = ?, "updated_at" = ? WHERE "business_cases"."id" = ?[0m  [["client_comment_status", 0], ["updated_at", "2018-07-13 14:56:34.346159"], ["id", 3]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "business_cases" ("client_location", "client_industry", "client_size", "user_expertise", "client_problem", "user_methodology", "client_results", "title", "client_position", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["client_location", "Afrique"], ["client_industry", "Voyage et loisirs"], ["client_size", ">1000m"], ["user_expertise", "Organisation"], ["client_problem", "Pas assez de rentabilité"], ["user_methodology", "L'instinct"], ["client_results", "Il a fait x2 à la fin !!!"], ["title", "Comment tester"], ["client_position", "COO"], ["created_at", "2018-07-13 14:59:52.884327"], ["updated_at", "2018-07-13 14:59:52.884327"]]
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "business_cases" SET "client_comment_status" = ?, "updated_at" = ? WHERE "business_cases"."id" = ?[0m  [["client_comment_status", 0], ["updated_at", "2018-07-13 14:59:52.886010"], ["id", 3]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by BusinessCasesController#index as HTML
+  Rendering business_cases/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered business_cases/index.html.erb within layouts/application (0.2ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "business_cases" ("client_location", "client_industry", "client_size", "user_expertise", "client_problem", "user_methodology", "client_results", "title", "client_position", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["client_location", "Afrique"], ["client_industry", "Medias"], ["client_size", "250-1000m"], ["user_expertise", "Digital"], ["client_problem", "Pas assez de rentabilité"], ["user_methodology", "L'instinct"], ["client_results", "Il a fait x2 à la fin !!!"], ["title", "Comment tester"], ["client_position", "DRH"], ["created_at", "2018-07-13 14:59:52.897750"], ["updated_at", "2018-07-13 14:59:52.897750"]]
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "business_cases" SET "client_comment_status" = ?, "updated_at" = ? WHERE "business_cases"."id" = ?[0m  [["client_comment_status", 0], ["updated_at", "2018-07-13 14:59:52.899648"], ["id", 3]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "business_cases" ("client_location", "client_industry", "client_size", "user_expertise", "client_problem", "user_methodology", "client_results", "title", "client_position", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["client_location", "Europe"], ["client_industry", "Matières premières"], ["client_size", "250-1000m"], ["user_expertise", "Sales & Marketing"], ["client_problem", "Pas assez de rentabilité"], ["user_methodology", "L'instinct"], ["client_results", "Il a fait x2 à la fin !!!"], ["title", "Comment tester"], ["client_position", "CTO"], ["created_at", "2018-07-13 14:59:55.020794"], ["updated_at", "2018-07-13 14:59:55.020794"]]
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "business_cases" SET "client_comment_status" = ?, "updated_at" = ? WHERE "business_cases"."id" = ?[0m  [["client_comment_status", 0], ["updated_at", "2018-07-13 14:59:55.023885"], ["id", 3]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by BusinessCasesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mBusinessCase Load (0.2ms)[0m  [1m[34mSELECT  "business_cases".* FROM "business_cases" WHERE "business_cases"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering business_cases/edit.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered business_cases/edit.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 5ms (Views: 0.7ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "business_cases" ("client_location", "client_industry", "client_size", "user_expertise", "client_problem", "user_methodology", "client_results", "title", "client_position", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["client_location", "Asie"], ["client_industry", "Technologie"], ["client_size", "50-250m"], ["user_expertise", "Finance"], ["client_problem", "Pas assez de rentabilité"], ["user_methodology", "L'instinct"], ["client_results", "Il a fait x2 à la fin !!!"], ["title", "Comment tester"], ["client_position", "CEO"], ["created_at", "2018-07-13 15:00:10.619514"], ["updated_at", "2018-07-13 15:00:10.619514"]]
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "business_cases" SET "client_comment_status" = ?, "updated_at" = ? WHERE "business_cases"."id" = ?[0m  [["client_comment_status", 0], ["updated_at", "2018-07-13 15:00:10.621543"], ["id", 3]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by BusinessCasesController#index as HTML
+  Rendering business_cases/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered business_cases/index.html.erb within layouts/application (0.3ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 7ms (Views: 5.5ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "business_cases" ("client_location", "client_industry", "client_size", "user_expertise", "client_problem", "user_methodology", "client_results", "title", "client_position", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["client_location", "Europe"], ["client_industry", "Produits ménagers et de soin personnel"], ["client_size", "50-250m"], ["user_expertise", "Finance"], ["client_problem", "Pas assez de rentabilité"], ["user_methodology", "L'instinct"], ["client_results", "Il a fait x2 à la fin !!!"], ["title", "Comment tester"], ["client_position", "COO"], ["created_at", "2018-07-13 15:00:10.636272"], ["updated_at", "2018-07-13 15:00:10.636272"]]
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "business_cases" SET "client_comment_status" = ?, "updated_at" = ? WHERE "business_cases"."id" = ?[0m  [["client_comment_status", 0], ["updated_at", "2018-07-13 15:00:10.638896"], ["id", 3]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by BusinessCasesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mBusinessCase Load (0.3ms)[0m  [1m[34mSELECT  "business_cases".* FROM "business_cases" WHERE "business_cases"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering business_cases/show.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered business_cases/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 7ms (Views: 1.0ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "business_cases" ("client_location", "client_industry", "client_size", "user_expertise", "client_problem", "user_methodology", "client_results", "title", "client_position", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["client_location", "Amerique"], ["client_industry", "Medias"], ["client_size", "250-1000m"], ["user_expertise", "Strategie"], ["client_problem", "Pas assez de rentabilité"], ["user_methodology", "L'instinct"], ["client_results", "Il a fait x2 à la fin !!!"], ["title", "Comment tester"], ["client_position", "DRH"], ["created_at", "2018-07-13 15:00:11.745439"], ["updated_at", "2018-07-13 15:00:11.745439"]]
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "business_cases" SET "client_comment_status" = ?, "updated_at" = ? WHERE "business_cases"."id" = ?[0m  [["client_comment_status", 0], ["updated_at", "2018-07-13 15:00:11.748242"], ["id", 3]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by BusinessCasesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mBusinessCase Load (0.1ms)[0m  [1m[34mSELECT  "business_cases".* FROM "business_cases" WHERE "business_cases"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering business_cases/edit.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered business_cases/edit.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "business_cases" ("client_location", "client_industry", "client_size", "user_expertise", "client_problem", "user_methodology", "client_results", "title", "client_position", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["client_location", "Asie"], ["client_industry", "Automobiles et équipementiers"], ["client_size", ">1000m"], ["user_expertise", "Finance"], ["client_problem", "Pas assez de rentabilité"], ["user_methodology", "L'instinct"], ["client_results", "Il a fait x2 à la fin !!!"], ["title", "Comment tester"], ["client_position", "CMO"], ["created_at", "2018-07-13 15:00:48.727911"], ["updated_at", "2018-07-13 15:00:48.727911"]]
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "business_cases" SET "client_comment_status" = ?, "updated_at" = ? WHERE "business_cases"."id" = ?[0m  [["client_comment_status", 0], ["updated_at", "2018-07-13 15:00:48.729788"], ["id", 3]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by BusinessCasesController#index as HTML
+  Rendering business_cases/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered business_cases/index.html.erb within layouts/application (0.2ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "business_cases" ("client_location", "client_industry", "client_size", "user_expertise", "client_problem", "user_methodology", "client_results", "title", "client_position", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["client_location", "France"], ["client_industry", "Services aux collectivités"], ["client_size", "0-1m"], ["user_expertise", "Finance"], ["client_problem", "Pas assez de rentabilité"], ["user_methodology", "L'instinct"], ["client_results", "Il a fait x2 à la fin !!!"], ["title", "Comment tester"], ["client_position", "COO"], ["created_at", "2018-07-13 15:00:48.742397"], ["updated_at", "2018-07-13 15:00:48.742397"]]
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "business_cases" SET "client_comment_status" = ?, "updated_at" = ? WHERE "business_cases"."id" = ?[0m  [["client_comment_status", 0], ["updated_at", "2018-07-13 15:00:48.744460"], ["id", 3]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by BusinessCasesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mBusinessCase Load (0.3ms)[0m  [1m[34mSELECT  "business_cases".* FROM "business_cases" WHERE "business_cases"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering business_cases/show.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered business_cases/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 7ms (Views: 1.6ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "business_cases" ("client_location", "client_industry", "client_size", "user_expertise", "client_problem", "user_methodology", "client_results", "title", "client_position", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["client_location", "Asie"], ["client_industry", "Banques"], ["client_size", "0-1m"], ["user_expertise", "Organisation"], ["client_problem", "Pas assez de rentabilité"], ["user_methodology", "L'instinct"], ["client_results", "Il a fait x2 à la fin !!!"], ["title", "Comment tester"], ["client_position", "CFO"], ["created_at", "2018-07-13 15:00:48.758550"], ["updated_at", "2018-07-13 15:00:48.758550"]]
+  [1m[35mSQL (0.8ms)[0m  [1m[33mUPDATE "business_cases" SET "client_comment_status" = ?, "updated_at" = ? WHERE "business_cases"."id" = ?[0m  [["client_comment_status", 0], ["updated_at", "2018-07-13 15:00:48.761096"], ["id", 3]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by BusinessCasesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mBusinessCase Load (0.1ms)[0m  [1m[34mSELECT  "business_cases".* FROM "business_cases" WHERE "business_cases"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering business_cases/edit.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered business_cases/edit.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 4ms (Views: 1.4ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "business_cases" ("client_location", "client_industry", "client_size", "user_expertise", "client_problem", "user_methodology", "client_results", "client_comment_status", "title", "client_position", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["client_location", "Europe"], ["client_industry", "Bâtiment et matériaux de construction"], ["client_size", "250-1000m"], ["user_expertise", "Sales & Marketing"], ["client_problem", "Pas assez de rentabilité"], ["user_methodology", "L'instinct"], ["client_results", "Il a fait x2 à la fin !!!"], ["client_comment_status", 1], ["title", "Comment tester"], ["client_position", "CTO"], ["created_at", "2018-07-13 15:00:48.851827"], ["updated_at", "2018-07-13 15:00:48.851827"]]
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "business_cases" SET "client_comment_status" = ?, "updated_at" = ? WHERE "business_cases"."id" = ?[0m  [["client_comment_status", 0], ["updated_at", "2018-07-13 15:00:48.853342"], ["id", 3]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "business_cases" ("client_location", "client_industry", "client_size", "user_expertise", "client_problem", "user_methodology", "client_results", "title", "client_position", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["client_location", "France"], ["client_industry", "Chimie"], ["client_size", "0-1m"], ["user_expertise", "Strategie"], ["client_problem", "Pas assez de rentabilité"], ["user_methodology", "L'instinct"], ["client_results", "Il a fait x2 à la fin !!!"], ["title", "Comment tester"], ["client_position", "CEO"], ["created_at", "2018-07-13 15:04:57.221598"], ["updated_at", "2018-07-13 15:04:57.221598"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by BusinessCasesController#index as HTML
+  Rendering business_cases/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered business_cases/index.html.erb within layouts/application (0.2ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "business_cases" ("client_location", "client_industry", "client_size", "user_expertise", "client_problem", "user_methodology", "client_results", "title", "client_position", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["client_location", "Afrique"], ["client_industry", "Voyage et loisirs"], ["client_size", "50-250m"], ["user_expertise", "Organisation"], ["client_problem", "Pas assez de rentabilité"], ["user_methodology", "L'instinct"], ["client_results", "Il a fait x2 à la fin !!!"], ["title", "Comment tester"], ["client_position", "CMO"], ["created_at", "2018-07-13 15:04:57.233043"], ["updated_at", "2018-07-13 15:04:57.233043"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by BusinessCasesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mBusinessCase Load (0.3ms)[0m  [1m[34mSELECT  "business_cases".* FROM "business_cases" WHERE "business_cases"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering business_cases/show.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered business_cases/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 6ms (Views: 1.1ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "business_cases" ("client_location", "client_industry", "client_size", "user_expertise", "client_problem", "user_methodology", "client_results", "title", "client_position", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["client_location", "Amerique"], ["client_industry", "Services aux collectivités"], ["client_size", "1-10m"], ["user_expertise", "Finance"], ["client_problem", "Pas assez de rentabilité"], ["user_methodology", "L'instinct"], ["client_results", "Il a fait x2 à la fin !!!"], ["title", "Comment tester"], ["client_position", "CEO"], ["created_at", "2018-07-13 15:04:57.245965"], ["updated_at", "2018-07-13 15:04:57.245965"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by BusinessCasesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mBusinessCase Load (0.1ms)[0m  [1m[34mSELECT  "business_cases".* FROM "business_cases" WHERE "business_cases"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering business_cases/edit.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered business_cases/edit.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 4ms (Views: 1.5ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "business_cases" ("client_location", "client_industry", "client_size", "user_expertise", "client_problem", "user_methodology", "client_results", "client_comment_status", "title", "client_position", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["client_location", "Asie"], ["client_industry", "Agro-alimentaire et boissons"], ["client_size", "1-10m"], ["user_expertise", "Strategie"], ["client_problem", "Pas assez de rentabilité"], ["user_methodology", "L'instinct"], ["client_results", "Il a fait x2 à la fin !!!"], ["client_comment_status", 1], ["title", "Comment tester"], ["client_position", "CEO"], ["created_at", "2018-07-13 15:04:57.328357"], ["updated_at", "2018-07-13 15:04:57.328357"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "business_cases" ("client_location", "client_industry", "client_size", "user_expertise", "client_problem", "user_methodology", "client_results", "title", "client_position", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["client_location", "France"], ["client_industry", "Bâtiment et matériaux de construction"], ["client_size", ">1000m"], ["user_expertise", "Digital"], ["client_problem", "Pas assez de rentabilité"], ["user_methodology", "L'instinct"], ["client_results", "Il a fait x2 à la fin !!!"], ["title", "Comment tester"], ["client_position", "CFO"], ["created_at", "2018-07-13 15:06:22.684366"], ["updated_at", "2018-07-13 15:06:22.684366"]]
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "business_cases" SET "client_comment_status" = ?, "updated_at" = ? WHERE "business_cases"."id" = ?[0m  [["client_comment_status", 0], ["updated_at", "2018-07-13 15:06:22.686088"], ["id", 3]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by BusinessCasesController#index as HTML
+  Rendering business_cases/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered business_cases/index.html.erb within layouts/application (0.3ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 7ms (Views: 5.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "business_cases" ("client_location", "client_industry", "client_size", "user_expertise", "client_problem", "user_methodology", "client_results", "title", "client_position", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["client_location", "Europe"], ["client_industry", "Assurance"], ["client_size", "250-1000m"], ["user_expertise", "Organisation"], ["client_problem", "Pas assez de rentabilité"], ["user_methodology", "L'instinct"], ["client_results", "Il a fait x2 à la fin !!!"], ["title", "Comment tester"], ["client_position", "CFO"], ["created_at", "2018-07-13 15:06:22.700748"], ["updated_at", "2018-07-13 15:06:22.700748"]]
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "business_cases" SET "client_comment_status" = ?, "updated_at" = ? WHERE "business_cases"."id" = ?[0m  [["client_comment_status", 0], ["updated_at", "2018-07-13 15:06:22.703206"], ["id", 3]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by BusinessCasesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mBusinessCase Load (0.3ms)[0m  [1m[34mSELECT  "business_cases".* FROM "business_cases" WHERE "business_cases"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering business_cases/show.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered business_cases/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 7ms (Views: 1.1ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "business_cases" ("client_location", "client_industry", "client_size", "user_expertise", "client_problem", "user_methodology", "client_results", "title", "client_position", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["client_location", "Asie"], ["client_industry", "Produits ménagers et de soin personnel"], ["client_size", "10-50m"], ["user_expertise", "Strategie"], ["client_problem", "Pas assez de rentabilité"], ["user_methodology", "L'instinct"], ["client_results", "Il a fait x2 à la fin !!!"], ["title", "Comment tester"], ["client_position", "COO"], ["created_at", "2018-07-13 15:06:22.717243"], ["updated_at", "2018-07-13 15:06:22.717243"]]
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "business_cases" SET "client_comment_status" = ?, "updated_at" = ? WHERE "business_cases"."id" = ?[0m  [["client_comment_status", 0], ["updated_at", "2018-07-13 15:06:22.719866"], ["id", 3]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by BusinessCasesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mBusinessCase Load (0.1ms)[0m  [1m[34mSELECT  "business_cases".* FROM "business_cases" WHERE "business_cases"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering business_cases/edit.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered business_cases/edit.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 3ms (Views: 0.9ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "business_cases" ("client_location", "client_industry", "client_size", "user_expertise", "client_problem", "user_methodology", "client_results", "title", "client_position", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["client_location", "Europe"], ["client_industry", "Technologie"], ["client_size", "250-1000m"], ["user_expertise", "Finance"], ["client_problem", "Pas assez de rentabilité"], ["user_methodology", "L'instinct"], ["client_results", "Il a fait x2 à la fin !!!"], ["title", "Comment tester"], ["client_position", "DRH"], ["created_at", "2018-07-13 15:06:48.015684"], ["updated_at", "2018-07-13 15:06:48.015684"]]
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "business_cases" SET "client_comment_status" = ?, "updated_at" = ? WHERE "business_cases"."id" = ?[0m  [["client_comment_status", 0], ["updated_at", "2018-07-13 15:06:48.017686"], ["id", 3]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "business_cases" ("client_location", "client_industry", "client_size", "user_expertise", "client_problem", "user_methodology", "client_results", "title", "client_position", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["client_location", "Moyen-Orient"], ["client_industry", "Télécommunications"], ["client_size", "1-10m"], ["user_expertise", "Digital"], ["client_problem", "Pas assez de rentabilité"], ["user_methodology", "L'instinct"], ["client_results", "Il a fait x2 à la fin !!!"], ["title", "Comment tester"], ["client_position", "CFO"], ["created_at", "2018-07-13 15:07:34.131226"], ["updated_at", "2018-07-13 15:07:34.131226"]]
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "business_cases" SET "client_comment_status" = ?, "updated_at" = ? WHERE "business_cases"."id" = ?[0m  [["client_comment_status", 0], ["updated_at", "2018-07-13 15:07:34.133215"], ["id", 3]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by BusinessCasesController#index as HTML
+  Rendering business_cases/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered business_cases/index.html.erb within layouts/application (0.2ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "business_cases" ("client_location", "client_industry", "client_size", "user_expertise", "client_problem", "user_methodology", "client_results", "title", "client_position", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["client_location", "Europe"], ["client_industry", "Immobilier"], ["client_size", "1-10m"], ["user_expertise", "Organisation"], ["client_problem", "Pas assez de rentabilité"], ["user_methodology", "L'instinct"], ["client_results", "Il a fait x2 à la fin !!!"], ["title", "Comment tester"], ["client_position", "CTO"], ["created_at", "2018-07-13 15:07:34.144340"], ["updated_at", "2018-07-13 15:07:34.144340"]]
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "business_cases" SET "client_comment_status" = ?, "updated_at" = ? WHERE "business_cases"."id" = ?[0m  [["client_comment_status", 0], ["updated_at", "2018-07-13 15:07:34.146672"], ["id", 3]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by BusinessCasesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mBusinessCase Load (0.2ms)[0m  [1m[34mSELECT  "business_cases".* FROM "business_cases" WHERE "business_cases"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering business_cases/show.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered business_cases/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 5ms (Views: 0.9ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "business_cases" ("client_location", "client_industry", "client_size", "user_expertise", "client_problem", "user_methodology", "client_results", "title", "client_position", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["client_location", "Moyen-Orient"], ["client_industry", "Immobilier"], ["client_size", ">1000m"], ["user_expertise", "Sales & Marketing"], ["client_problem", "Pas assez de rentabilité"], ["user_methodology", "L'instinct"], ["client_results", "Il a fait x2 à la fin !!!"], ["title", "Comment tester"], ["client_position", "CTO"], ["created_at", "2018-07-13 15:07:34.158440"], ["updated_at", "2018-07-13 15:07:34.158440"]]
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "business_cases" SET "client_comment_status" = ?, "updated_at" = ? WHERE "business_cases"."id" = ?[0m  [["client_comment_status", 0], ["updated_at", "2018-07-13 15:07:34.160788"], ["id", 3]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by BusinessCasesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mBusinessCase Load (0.1ms)[0m  [1m[34mSELECT  "business_cases".* FROM "business_cases" WHERE "business_cases"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering business_cases/edit.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered business_cases/edit.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 4ms (Views: 1.1ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "business_cases" ("client_location", "client_industry", "client_size", "user_expertise", "client_problem", "user_methodology", "client_results", "title", "client_position", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["client_location", "Europe"], ["client_industry", "Technologie"], ["client_size", "10-50m"], ["user_expertise", "Strategie"], ["client_problem", "Pas assez de rentabilité"], ["user_methodology", "L'instinct"], ["client_results", "Il a fait x2 à la fin !!!"], ["title", "Comment tester"], ["client_position", "COO"], ["created_at", "2018-07-13 15:07:34.240375"], ["updated_at", "2018-07-13 15:07:34.240375"]]
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "business_cases" SET "client_comment_status" = ?, "updated_at" = ? WHERE "business_cases"."id" = ?[0m  [["client_comment_status", 0], ["updated_at", "2018-07-13 15:07:34.242654"], ["id", 3]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "business_cases" SET "client_comment_status" = ?, "updated_at" = ? WHERE "business_cases"."id" = ?[0m  [["client_comment_status", 1], ["updated_at", "2018-07-13 15:07:34.244501"], ["id", 3]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m

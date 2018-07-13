@@ -1320,3 +1320,232 @@ Processing by BusinessCasesController#index as HTML
 Completed 200 OK in 17ms (Views: 15.2ms | ActiveRecord: 0.2ms)
 
 
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to ChangeClientCommentValidatedToBeIntegerInBusinessCases (20180713134056)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to ChangeClientCommentValidatedToBeIntegerInBusinessCases (20180713134056)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TEMPORARY TABLE "abusiness_cases" ("id" integer NOT NULL PRIMARY KEY, "client_location" varchar DEFAULT NULL, "client_industry" varchar DEFAULT NULL, "client_size" varchar DEFAULT NULL, "user_expertise" varchar DEFAULT NULL, "client_problem" text DEFAULT NULL, "user_methodology" text DEFAULT NULL, "client_results" text DEFAULT NULL, "client_comments" text DEFAULT NULL, "user_link" text DEFAULT NULL, "client_comments_validated" boolean DEFAULT NULL, "title" varchar DEFAULT NULL, "client_position" varchar DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[32mINSERT INTO "abusiness_cases" ("id","client_location","client_industry","client_size","user_expertise","client_problem","user_methodology","client_results","client_comments","user_link","client_comments_validated","title","client_position","created_at","updated_at")
+                     SELECT "id","client_location","client_industry","client_size","user_expertise","client_problem","user_methodology","client_results","client_comments","user_link","client_comments_validated","title","client_position","created_at","updated_at" FROM "business_cases"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE "business_cases"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "business_cases" ("id" integer NOT NULL PRIMARY KEY, "client_location" varchar DEFAULT NULL, "client_industry" varchar DEFAULT NULL, "client_size" varchar DEFAULT NULL, "user_expertise" varchar DEFAULT NULL, "client_problem" text DEFAULT NULL, "user_methodology" text DEFAULT NULL, "client_results" text DEFAULT NULL, "client_comments" text DEFAULT NULL, "user_link" text DEFAULT NULL, "client_comments_validated" integer DEFAULT NULL, "title" varchar DEFAULT NULL, "client_position" varchar DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[32mINSERT INTO "business_cases" ("id","client_location","client_industry","client_size","user_expertise","client_problem","user_methodology","client_results","client_comments","user_link","client_comments_validated","title","client_position","created_at","updated_at")
+                     SELECT "id","client_location","client_industry","client_size","user_expertise","client_problem","user_methodology","client_results","client_comments","user_link","client_comments_validated","title","client_position","created_at","updated_at" FROM "abusiness_cases"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "abusiness_cases"[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180713134056"]]
+  [1m[35m (104.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mBusinessCase Load (0.1ms)[0m  [1m[34mSELECT  "business_cases".* FROM "business_cases" ORDER BY "business_cases"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mBusinessCase Load (0.2ms)[0m  [1m[34mSELECT  "business_cases".* FROM "business_cases" ORDER BY "business_cases"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[33mUPDATE "business_cases" SET "client_comments_validated" = ?, "updated_at" = ? WHERE "business_cases"."id" = ?[0m  [["client_comments_validated", 1], ["updated_at", "2018-07-13 13:52:14.514210"], ["id", 1]]
+  [1m[35m (123.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBusinessCase Load (0.1ms)[0m  [1m[34mSELECT  "business_cases".* FROM "business_cases" ORDER BY "business_cases"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mBusinessCase Load (0.3ms)[0m  [1m[34mSELECT  "business_cases".* FROM "business_cases" ORDER BY "business_cases"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to RenameClientCommentsValidatedToClientCommentStatus (20180713140205)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TEMPORARY TABLE "abusiness_cases" ("id" integer NOT NULL PRIMARY KEY, "client_location" varchar DEFAULT NULL, "client_industry" varchar DEFAULT NULL, "client_size" varchar DEFAULT NULL, "user_expertise" varchar DEFAULT NULL, "client_problem" text DEFAULT NULL, "user_methodology" text DEFAULT NULL, "client_results" text DEFAULT NULL, "client_comments" text DEFAULT NULL, "user_link" text DEFAULT NULL, "client_comment_status" integer DEFAULT NULL, "title" varchar DEFAULT NULL, "client_position" varchar DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[32mINSERT INTO "abusiness_cases" ("id","client_location","client_industry","client_size","user_expertise","client_problem","user_methodology","client_results","client_comments","user_link","client_comment_status","title","client_position","created_at","updated_at")
+                     SELECT "id","client_location","client_industry","client_size","user_expertise","client_problem","user_methodology","client_results","client_comments","user_link","client_comments_validated","title","client_position","created_at","updated_at" FROM "business_cases"[0m
+  [1m[35m (2.0ms)[0m  [1m[35mDROP TABLE "business_cases"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "business_cases" ("id" integer NOT NULL PRIMARY KEY, "client_location" varchar DEFAULT NULL, "client_industry" varchar DEFAULT NULL, "client_size" varchar DEFAULT NULL, "user_expertise" varchar DEFAULT NULL, "client_problem" text DEFAULT NULL, "user_methodology" text DEFAULT NULL, "client_results" text DEFAULT NULL, "client_comments" text DEFAULT NULL, "user_link" text DEFAULT NULL, "client_comment_status" integer DEFAULT NULL, "title" varchar DEFAULT NULL, "client_position" varchar DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[32mINSERT INTO "business_cases" ("id","client_location","client_industry","client_size","user_expertise","client_problem","user_methodology","client_results","client_comments","user_link","client_comment_status","title","client_position","created_at","updated_at")
+                     SELECT "id","client_location","client_industry","client_size","user_expertise","client_problem","user_methodology","client_results","client_comments","user_link","client_comment_status","title","client_position","created_at","updated_at" FROM "abusiness_cases"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "abusiness_cases"[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180713140205"]]
+  [1m[35m (119.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mBusinessCase Load (0.2ms)[0m  [1m[34mSELECT  "business_cases".* FROM "business_cases" ORDER BY "business_cases"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mBusinessCase Load (0.4ms)[0m  [1m[34mSELECT  "business_cases".* FROM "business_cases" ORDER BY "business_cases"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mBusinessCase Load (0.4ms)[0m  [1m[34mSELECT  "business_cases".* FROM "business_cases" ORDER BY "business_cases"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[33mUPDATE "business_cases" SET "client_comment_status" = ?, "updated_at" = ? WHERE "business_cases"."id" = ?[0m  [["client_comment_status", 2], ["updated_at", "2018-07-13 14:08:37.108428"], ["id", 1]]
+  [1m[35m (123.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/business_cases/new" for 127.0.0.1 at 2018-07-13 16:21:41 +0200
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BusinessCasesController#new as HTML
+  Rendering business_cases/new.html.erb within layouts/application
+  Rendered business_cases/_form.html.erb (37.1ms)
+  Rendered business_cases/new.html.erb within layouts/application (38.4ms)
+Completed 200 OK in 213ms (Views: 187.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/business_cases" for 127.0.0.1 at 2018-07-13 16:39:28 +0200
+Processing by BusinessCasesController#index as HTML
+  Rendering business_cases/index.html.erb within layouts/application
+  [1m[36mBusinessCase Load (0.1ms)[0m  [1m[34mSELECT "business_cases".* FROM "business_cases"[0m
+  Rendered business_cases/index.html.erb within layouts/application (72.8ms)
+Completed 500 Internal Server Error in 81ms (ActiveRecord: 1.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `client_comments_validated' for #<BusinessCase:0x00007f84a4042d08>
+Did you mean?  client_comments_in_database):
+    33:         <td><%= business_case.client_results %></td>
+    34:         <td><%= business_case.client_comments %></td>
+    35:         <td><%= business_case.user_link %></td>
+    36:         <td><%= business_case.client_comments_validated %></td>
+    37:         <td><%= business_case.title %></td>
+    38:         <td><%= business_case.client_position %></td>
+    39:         <td><%= link_to 'Show', business_case %></td>
+  
+app/views/business_cases/index.html.erb:36:in `block in _app_views_business_cases_index_html_erb___2041735800203187142_70103664827560'
+app/views/business_cases/index.html.erb:25:in `_app_views_business_cases_index_html_erb___2041735800203187142_70103664827560'
+Started GET "/business_cases" for 127.0.0.1 at 2018-07-13 16:39:37 +0200
+Processing by BusinessCasesController#index as HTML
+  Rendering business_cases/index.html.erb within layouts/application
+  [1m[36mBusinessCase Load (0.2ms)[0m  [1m[34mSELECT "business_cases".* FROM "business_cases"[0m
+  Rendered business_cases/index.html.erb within layouts/application (39.6ms)
+Completed 500 Internal Server Error in 42ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `client_comments_validated' for #<BusinessCase:0x00007f8490093d20>
+Did you mean?  client_comments_in_database):
+    33:         <td><%= business_case.client_results %></td>
+    34:         <td><%= business_case.client_comments %></td>
+    35:         <td><%= business_case.user_link %></td>
+    36:         <td><%= business_case.client_comments_validated %></td>
+    37:         <td><%= business_case.title %></td>
+    38:         <td><%= business_case.client_position %></td>
+    39:         <td><%= link_to 'Show', business_case %></td>
+  
+app/views/business_cases/index.html.erb:36:in `block in _app_views_business_cases_index_html_erb___2041735800203187142_70103664582720'
+app/views/business_cases/index.html.erb:25:in `_app_views_business_cases_index_html_erb___2041735800203187142_70103664582720'
+Started GET "/business_cases" for 127.0.0.1 at 2018-07-13 16:41:15 +0200
+Processing by BusinessCasesController#index as HTML
+  Rendering business_cases/index.html.erb within layouts/application
+  [1m[36mBusinessCase Load (0.2ms)[0m  [1m[34mSELECT "business_cases".* FROM "business_cases"[0m
+  Rendered business_cases/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 18ms (Views: 16.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/business_cases/new" for 127.0.0.1 at 2018-07-13 16:41:19 +0200
+Processing by BusinessCasesController#new as HTML
+  Rendering business_cases/new.html.erb within layouts/application
+  Rendered business_cases/_form.html.erb (4.6ms)
+  Rendered business_cases/new.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 19ms (Views: 17.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/business_cases" for 127.0.0.1 at 2018-07-13 16:42:16 +0200
+Processing by BusinessCasesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4MZ68T8AZOJ3ZZfcxSIw+rvZkjAzoc/93k2EjyOTgTNBB0bjeiIPj91HLEJakLh9BmxP34wYR/d5voObNgOEew==", "business_case"=>{"title"=>"Comment tester le statut ?", "client_location"=>"Afrique", "client_industry"=>"Télécommunications", "client_size"=>">1000m", "client_position"=>"CTO", "user_expertise"=>"Finance", "client_problem"=>"totu, tout , tout est dur", "user_methodology"=>"l'ordi", "client_results"=>"il est depressif", "client_comments"=>"AU top !", "user_link"=>"plus tard"}, "commit"=>"Créer le business case"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "business_cases" ("client_location", "client_industry", "client_size", "user_expertise", "client_problem", "user_methodology", "client_results", "client_comments", "user_link", "title", "client_position", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["client_location", "Afrique"], ["client_industry", "Télécommunications"], ["client_size", ">1000m"], ["user_expertise", "Finance"], ["client_problem", "totu, tout , tout est dur"], ["user_methodology", "l'ordi"], ["client_results", "il est depressif"], ["client_comments", "AU top !"], ["user_link", "plus tard"], ["title", "Comment tester le statut ?"], ["client_position", "CTO"], ["created_at", "2018-07-13 14:42:16.335593"], ["updated_at", "2018-07-13 14:42:16.335593"]]
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+Completed 500 Internal Server Error in 44ms (ActiveRecord: 1.1ms)
+
+
+  
+NameError (undefined local variable or method `client_comment' for #<BusinessCase:0x00007f84a1a866c8>
+Did you mean?  client_comments
+               client_comments?
+               client_comments=):
+  
+app/models/business_case.rb:17:in `block in <class:BusinessCase>'
+app/controllers/business_cases_controller.rb:26:in `block in create'
+app/controllers/business_cases_controller.rb:25:in `create'
+Started POST "/business_cases" for 127.0.0.1 at 2018-07-13 16:43:04 +0200
+Processing by BusinessCasesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4MZ68T8AZOJ3ZZfcxSIw+rvZkjAzoc/93k2EjyOTgTNBB0bjeiIPj91HLEJakLh9BmxP34wYR/d5voObNgOEew==", "business_case"=>{"title"=>"Comment tester le statut ?", "client_location"=>"Afrique", "client_industry"=>"Télécommunications", "client_size"=>">1000m", "client_position"=>"CTO", "user_expertise"=>"Finance", "client_problem"=>"totu, tout , tout est dur", "user_methodology"=>"l'ordi", "client_results"=>"il est depressif", "client_comments"=>"AU top !", "user_link"=>"plus tard"}, "commit"=>"Créer le business case"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "business_cases" ("client_location", "client_industry", "client_size", "user_expertise", "client_problem", "user_methodology", "client_results", "client_comments", "user_link", "title", "client_position", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["client_location", "Afrique"], ["client_industry", "Télécommunications"], ["client_size", ">1000m"], ["user_expertise", "Finance"], ["client_problem", "totu, tout , tout est dur"], ["user_methodology", "l'ordi"], ["client_results", "il est depressif"], ["client_comments", "AU top !"], ["user_link", "plus tard"], ["title", "Comment tester le statut ?"], ["client_position", "CTO"], ["created_at", "2018-07-13 14:43:04.212890"], ["updated_at", "2018-07-13 14:43:04.212890"]]
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 1.4ms)
+
+
+  
+NoMethodError (undefined method `pending!' for nil:NilClass):
+  
+app/models/business_case.rb:20:in `block in <class:BusinessCase>'
+app/controllers/business_cases_controller.rb:26:in `block in create'
+app/controllers/business_cases_controller.rb:25:in `create'
+Started POST "/business_cases" for 127.0.0.1 at 2018-07-13 16:43:42 +0200
+Processing by BusinessCasesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4MZ68T8AZOJ3ZZfcxSIw+rvZkjAzoc/93k2EjyOTgTNBB0bjeiIPj91HLEJakLh9BmxP34wYR/d5voObNgOEew==", "business_case"=>{"title"=>"Comment tester le statut ?", "client_location"=>"Afrique", "client_industry"=>"Télécommunications", "client_size"=>">1000m", "client_position"=>"CTO", "user_expertise"=>"Finance", "client_problem"=>"totu, tout , tout est dur", "user_methodology"=>"l'ordi", "client_results"=>"il est depressif", "client_comments"=>"AU top !", "user_link"=>"plus tard"}, "commit"=>"Créer le business case"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "business_cases" ("client_location", "client_industry", "client_size", "user_expertise", "client_problem", "user_methodology", "client_results", "client_comments", "user_link", "title", "client_position", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["client_location", "Afrique"], ["client_industry", "Télécommunications"], ["client_size", ">1000m"], ["user_expertise", "Finance"], ["client_problem", "totu, tout , tout est dur"], ["user_methodology", "l'ordi"], ["client_results", "il est depressif"], ["client_comments", "AU top !"], ["user_link", "plus tard"], ["title", "Comment tester le statut ?"], ["client_position", "CTO"], ["created_at", "2018-07-13 14:43:42.402927"], ["updated_at", "2018-07-13 14:43:42.402927"]]
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+Completed 500 Internal Server Error in 37ms (ActiveRecord: 1.8ms)
+
+
+  
+NoMethodError (undefined method `pending!' for #<BusinessCase:0x00007f8490085400>):
+  
+app/models/business_case.rb:20:in `block in <class:BusinessCase>'
+app/controllers/business_cases_controller.rb:26:in `block in create'
+app/controllers/business_cases_controller.rb:25:in `create'
+Started POST "/business_cases" for 127.0.0.1 at 2018-07-13 16:43:54 +0200
+Processing by BusinessCasesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4MZ68T8AZOJ3ZZfcxSIw+rvZkjAzoc/93k2EjyOTgTNBB0bjeiIPj91HLEJakLh9BmxP34wYR/d5voObNgOEew==", "business_case"=>{"title"=>"Comment tester le statut ?", "client_location"=>"Afrique", "client_industry"=>"Télécommunications", "client_size"=>">1000m", "client_position"=>"CTO", "user_expertise"=>"Finance", "client_problem"=>"totu, tout , tout est dur", "user_methodology"=>"l'ordi", "client_results"=>"il est depressif", "client_comments"=>"AU top !", "user_link"=>"plus tard"}, "commit"=>"Créer le business case"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "business_cases" ("client_location", "client_industry", "client_size", "user_expertise", "client_problem", "user_methodology", "client_results", "client_comments", "user_link", "title", "client_position", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["client_location", "Afrique"], ["client_industry", "Télécommunications"], ["client_size", ">1000m"], ["user_expertise", "Finance"], ["client_problem", "totu, tout , tout est dur"], ["user_methodology", "l'ordi"], ["client_results", "il est depressif"], ["client_comments", "AU top !"], ["user_link", "plus tard"], ["title", "Comment tester le statut ?"], ["client_position", "CTO"], ["created_at", "2018-07-13 14:43:54.770514"], ["updated_at", "2018-07-13 14:43:54.770514"]]
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 1.4ms)
+
+
+  
+NoMethodError (undefined method `pending!' for #<BusinessCase:0x00007f84a1bf8a60>):
+  
+app/models/business_case.rb:20:in `block in <class:BusinessCase>'
+app/controllers/business_cases_controller.rb:26:in `block in create'
+app/controllers/business_cases_controller.rb:25:in `create'
+Started POST "/business_cases" for 127.0.0.1 at 2018-07-13 16:44:25 +0200
+Processing by BusinessCasesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4MZ68T8AZOJ3ZZfcxSIw+rvZkjAzoc/93k2EjyOTgTNBB0bjeiIPj91HLEJakLh9BmxP34wYR/d5voObNgOEew==", "business_case"=>{"title"=>"Comment tester le statut ?", "client_location"=>"Afrique", "client_industry"=>"Télécommunications", "client_size"=>">1000m", "client_position"=>"CTO", "user_expertise"=>"Finance", "client_problem"=>"totu, tout , tout est dur", "user_methodology"=>"l'ordi", "client_results"=>"il est depressif", "client_comments"=>"AU top !", "user_link"=>"plus tard"}, "commit"=>"Créer le business case"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "business_cases" ("client_location", "client_industry", "client_size", "user_expertise", "client_problem", "user_methodology", "client_results", "client_comments", "user_link", "title", "client_position", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["client_location", "Afrique"], ["client_industry", "Télécommunications"], ["client_size", ">1000m"], ["user_expertise", "Finance"], ["client_problem", "totu, tout , tout est dur"], ["user_methodology", "l'ordi"], ["client_results", "il est depressif"], ["client_comments", "AU top !"], ["user_link", "plus tard"], ["title", "Comment tester le statut ?"], ["client_position", "CTO"], ["created_at", "2018-07-13 14:44:25.478112"], ["updated_at", "2018-07-13 14:44:25.478112"]]
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "business_cases" SET "client_comment_status" = ?, "updated_at" = ? WHERE "business_cases"."id" = ?[0m  [["client_comment_status", 1], ["updated_at", "2018-07-13 14:44:25.480289"], ["id", 2]]
+  [1m[35m (106.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/business_cases/2
+Completed 302 Found in 152ms (ActiveRecord: 108.3ms)
+
+
+Started GET "/business_cases/2" for 127.0.0.1 at 2018-07-13 16:44:25 +0200
+Processing by BusinessCasesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mBusinessCase Load (0.3ms)[0m  [1m[34mSELECT  "business_cases".* FROM "business_cases" WHERE "business_cases"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering business_cases/show.html.erb within layouts/application
+  Rendered business_cases/show.html.erb within layouts/application (38.9ms)
+Completed 500 Internal Server Error in 59ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `client_comments_validated' for #<BusinessCase:0x00007f848827c3d8>
+Did you mean?  client_comments_in_database):
+    47: 
+    48: <p>
+    49:   <strong>Client comments validated:</strong>
+    50:   <%= @business_case.client_comments_validated %>
+    51: </p>
+    52: 
+    53: <p>
+  
+app/views/business_cases/show.html.erb:50:in `_app_views_business_cases_show_html_erb__3077364624101230714_70103664635180'
+Started GET "/business_cases/2" for 127.0.0.1 at 2018-07-13 16:45:09 +0200
+Processing by BusinessCasesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mBusinessCase Load (0.1ms)[0m  [1m[34mSELECT  "business_cases".* FROM "business_cases" WHERE "business_cases"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering business_cases/show.html.erb within layouts/application
+  Rendered business_cases/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 16ms (Views: 14.1ms | ActiveRecord: 0.1ms)
+
+

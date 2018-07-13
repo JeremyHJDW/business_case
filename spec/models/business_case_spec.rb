@@ -116,8 +116,19 @@ RSpec.describe BusinessCase, type: :model do
 
       subject.valid?
       expect(subject).to be_valid
+
+
+      subject.save
+
+      subject.comment_pending!
+      expect(subject.client_comment_status).to eq("pending")
     end
-    
+
+    # it "changes comment status" do
+    #   subject.comment_pending!
+    #   expect(subject.client_comment_status).to eq "pending"
+    # end
+
   end
 
 end

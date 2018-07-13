@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180618140634) do
+ActiveRecord::Schema.define(version: 20180713140205) do
 
   create_table "business_cases", force: :cascade do |t|
     t.string "client_location"
@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 20180618140634) do
     t.text "client_results"
     t.text "client_comments"
     t.text "user_link"
-    t.boolean "client_comments_validated"
+    t.integer "client_comment_status"
     t.string "title"
     t.string "client_position"
     t.datetime "created_at", null: false
