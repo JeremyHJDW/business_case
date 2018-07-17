@@ -1549,3 +1549,40 @@ Processing by BusinessCasesController#show as HTML
 Completed 200 OK in 16ms (Views: 14.1ms | ActiveRecord: 0.1ms)
 
 
+Started GET "/business_cases/2" for 127.0.0.1 at 2018-07-13 17:32:28 +0200
+Processing by BusinessCasesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mBusinessCase Load (0.1ms)[0m  [1m[34mSELECT  "business_cases".* FROM "business_cases" WHERE "business_cases"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering business_cases/show.html.erb within layouts/application
+  Rendered business_cases/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 35ms (Views: 14.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/business_cases/2/edit" for 127.0.0.1 at 2018-07-13 17:32:40 +0200
+Processing by BusinessCasesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mBusinessCase Load (0.1ms)[0m  [1m[34mSELECT  "business_cases".* FROM "business_cases" WHERE "business_cases"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering business_cases/edit.html.erb within layouts/application
+  Rendered business_cases/_form.html.erb (4.7ms)
+  Rendered business_cases/edit.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 20ms (Views: 18.3ms | ActiveRecord: 0.1ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to RenameClientCommentStatusToClientValidationStatus (20180717160900)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TEMPORARY TABLE "abusiness_cases" ("id" integer NOT NULL PRIMARY KEY, "client_location" varchar DEFAULT NULL, "client_industry" varchar DEFAULT NULL, "client_size" varchar DEFAULT NULL, "user_expertise" varchar DEFAULT NULL, "client_problem" text DEFAULT NULL, "user_methodology" text DEFAULT NULL, "client_results" text DEFAULT NULL, "client_comments" text DEFAULT NULL, "user_link" text DEFAULT NULL, "client_validation_status" integer DEFAULT NULL, "title" varchar DEFAULT NULL, "client_position" varchar DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[32mINSERT INTO "abusiness_cases" ("id","client_location","client_industry","client_size","user_expertise","client_problem","user_methodology","client_results","client_comments","user_link","client_validation_status","title","client_position","created_at","updated_at")
+                     SELECT "id","client_location","client_industry","client_size","user_expertise","client_problem","user_methodology","client_results","client_comments","user_link","client_comment_status","title","client_position","created_at","updated_at" FROM "business_cases"[0m
+  [1m[35m (1.5ms)[0m  [1m[35mDROP TABLE "business_cases"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "business_cases" ("id" integer NOT NULL PRIMARY KEY, "client_location" varchar DEFAULT NULL, "client_industry" varchar DEFAULT NULL, "client_size" varchar DEFAULT NULL, "user_expertise" varchar DEFAULT NULL, "client_problem" text DEFAULT NULL, "user_methodology" text DEFAULT NULL, "client_results" text DEFAULT NULL, "client_comments" text DEFAULT NULL, "user_link" text DEFAULT NULL, "client_validation_status" integer DEFAULT NULL, "title" varchar DEFAULT NULL, "client_position" varchar DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[32mINSERT INTO "business_cases" ("id","client_location","client_industry","client_size","user_expertise","client_problem","user_methodology","client_results","client_comments","user_link","client_validation_status","title","client_position","created_at","updated_at")
+                     SELECT "id","client_location","client_industry","client_size","user_expertise","client_problem","user_methodology","client_results","client_comments","user_link","client_validation_status","title","client_position","created_at","updated_at" FROM "abusiness_cases"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "abusiness_cases"[0m
+  [1m[35mSQL (1.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180717160900"]]
+  [1m[35m (108.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
