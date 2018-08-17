@@ -1,0 +1,77 @@
+<%= form_with(model: business_case, local: true) do |form| %>
+  <% if business_case.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(business_case.errors.count, "error") %> prohibited this business_case from being saved:</h2>
+
+      <ul>
+      <% business_case.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+    <div class="field">
+      <%= form.label "Titre du Business Case" %>
+      <%= form.text_field :title, id: :business_case_title %>
+    </div>
+
+
+
+  <div class="field">
+    <%= form.label "Localisation du client" %>
+    <%= form.select :client_location, options_for_select(BusinessCase.client_locations_list, business_case.client_location) %>
+  </div>
+
+  <div class="field">
+    <%= form.label "Industrie du client" %>
+    <%= form.select :client_industry, options_for_select(BusinessCase.client_industries_list, business_case.client_industry) %>
+  </div>
+
+  <div class="field">
+    <%= form.label "Taille d'entreprise cliente" %>
+    <%= form.select :client_size, options_for_select(BusinessCase.client_sizes_list, business_case.client_size) %>
+  </div>
+
+  <div class="field">
+    <%= form.label "Fonction de l'interlocuteur client" %>
+    <%= form.select :client_position, options_for_select(BusinessCase.client_positions_list, business_case.client_position) %>
+  </div>
+
+  <div class="field">
+    <%= form.label "Expertise du consultant" %>
+    <%= form.select :user_expertise, options_for_select(BusinessCase.user_expertises_list, business_case.user_expertise) %>
+  </div>
+
+  <div class="field">
+    <%= form.label "Problématique du client" %>
+    <%= form.text_area :client_problem, id: :business_case_client_problem %>
+  </div>
+
+  <div class="field">
+    <%= form.label "Méthodologie et Outils utilisés par le consultant" %>
+    <%= form.text_area :user_methodology, id: :business_case_user_methodology %>
+  </div>
+
+  <div class="field">
+    <%= form.label "Résultats pour le client" %>
+    <%= form.text_area :client_results, id: :business_case_client_results %>
+  </div>
+
+  <div class="field">
+    <%= form.label "Commentaires client" %>
+    <%= form.text_area :client_comments, id: :business_case_client_comments %>
+  </div>
+
+  <div class="field">
+    <%= form.label "Lien vers Consultant" %>
+    <%= form.text_area :user_link, id: :business_case_user_link %>
+  </div>
+
+
+
+  <div class="actions">
+    <%= form.submit "Editer le business case"%>
+  </div>
+<% end %>

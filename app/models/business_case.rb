@@ -13,5 +13,5 @@ class BusinessCase < ApplicationRecord
   validates :client_results, presence: true
   enum client_validation_status: { not_available: 0, without_approval: 1, pending: 2, validated: 3, rejected: 4 }
 
-
+  belongs_to :user
 end

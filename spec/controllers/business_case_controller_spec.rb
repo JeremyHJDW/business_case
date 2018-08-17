@@ -23,6 +23,7 @@ RSpec.describe BusinessCasesController, type: :controller do
   describe "GET #show" do
     it "returns a 200 custom status code" do
       get :show, params: { id: @b.id }
+      byebug
       expect(response).to have_http_status(200)
     end
   end

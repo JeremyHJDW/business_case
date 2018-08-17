@@ -1586,3 +1586,526 @@ Migrating to RenameClientCommentStatusToClientValidationStatus (20180717160900)
   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
   [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
   [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2018-08-17 11:20:37 +0200
+Processing by BusinessCasesController#index as HTML
+  Rendering business_cases/index.html.erb within layouts/application
+  [1m[36mBusinessCase Load (0.2ms)[0m  [1m[34mSELECT "business_cases".* FROM "business_cases"[0m
+  Rendered business_cases/index.html.erb within layouts/application (27.9ms)
+Completed 200 OK in 109ms (Views: 87.3ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-17 11:20:49 +0200
+Processing by BusinessCasesController#index as HTML
+  Rendering business_cases/index.html.erb within layouts/application
+  [1m[36mBusinessCase Load (0.3ms)[0m  [1m[34mSELECT "business_cases".* FROM "business_cases"[0m
+  Rendered business_cases/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 22ms (Views: 20.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-17 11:26:37 +0200
+Processing by BusinessCasesController#index as HTML
+  Rendering business_cases/index.html.erb within layouts/application
+  [1m[36mBusinessCase Load (0.2ms)[0m  [1m[34mSELECT "business_cases".* FROM "business_cases"[0m
+  Rendered business_cases/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 18ms (Views: 17.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/business_cases/1" for 127.0.0.1 at 2018-08-17 11:27:42 +0200
+Processing by BusinessCasesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBusinessCase Load (0.2ms)[0m  [1m[34mSELECT  "business_cases".* FROM "business_cases" WHERE "business_cases"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering business_cases/show.html.erb within layouts/application
+  Rendered business_cases/show.html.erb within layouts/application (42.6ms)
+Completed 500 Internal Server Error in 47ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `client_comment_status' for #<BusinessCase:0x00007fd4b952f608>
+Did you mean?  client_comments_was
+               client_comments
+               client_comments?
+               client_comments=
+               client_comments_change):
+    47: 
+    48: <p>
+    49:   <strong>Client comments validated:</strong>
+    50:   <%= @business_case.client_comment_status %>
+    51: </p>
+    52: 
+    53: <p>
+  
+app/views/business_cases/show.html.erb:50:in `_app_views_business_cases_show_html_erb___4226164050134135120_70275809504220'
+Started GET "/" for 127.0.0.1 at 2018-08-17 11:31:00 +0200
+Processing by BusinessCasesController#index as HTML
+  Rendering business_cases/index.html.erb within layouts/application
+  [1m[36mBusinessCase Load (0.2ms)[0m  [1m[34mSELECT "business_cases".* FROM "business_cases"[0m
+  Rendered business_cases/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 32ms (Views: 31.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/business_cases/1/edit" for 127.0.0.1 at 2018-08-17 11:31:03 +0200
+Processing by BusinessCasesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBusinessCase Load (0.2ms)[0m  [1m[34mSELECT  "business_cases".* FROM "business_cases" WHERE "business_cases"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering business_cases/edit.html.erb within layouts/application
+  Rendered business_cases/_form.html.erb (86.1ms)
+  Rendered business_cases/edit.html.erb within layouts/application (87.2ms)
+Completed 200 OK in 100ms (Views: 98.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/business_cases/1" for 127.0.0.1 at 2018-08-17 11:34:53 +0200
+Processing by BusinessCasesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBusinessCase Load (0.3ms)[0m  [1m[34mSELECT  "business_cases".* FROM "business_cases" WHERE "business_cases"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering business_cases/show.html.erb within layouts/application
+  Rendered business_cases/show.html.erb within layouts/application (28.5ms)
+Completed 500 Internal Server Error in 33ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `client_comment_status' for #<BusinessCase:0x00007fd4b981fbb0>
+Did you mean?  client_comments_was
+               client_comments
+               client_comments?
+               client_comments=
+               client_comments_change):
+    47: 
+    48: <p>
+    49:   <strong>Client comments validated:</strong>
+    50:   <%= @business_case.client_comment_status %>
+    51: </p>
+    52: 
+    53: <p>
+  
+app/views/business_cases/show.html.erb:50:in `_app_views_business_cases_show_html_erb___4226164050134135120_70275811045720'
+Started GET "/business_cases/1" for 127.0.0.1 at 2018-08-17 11:36:56 +0200
+Processing by BusinessCasesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBusinessCase Load (0.2ms)[0m  [1m[34mSELECT  "business_cases".* FROM "business_cases" WHERE "business_cases"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering business_cases/show.html.erb within layouts/application
+  Rendered business_cases/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 13ms (Views: 11.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/business_cases/1/edit" for 127.0.0.1 at 2018-08-17 11:37:57 +0200
+Processing by BusinessCasesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBusinessCase Load (0.1ms)[0m  [1m[34mSELECT  "business_cases".* FROM "business_cases" WHERE "business_cases"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering business_cases/edit.html.erb within layouts/application
+  Rendered business_cases/_form.html.erb (4.9ms)
+  Rendered business_cases/edit.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 21ms (Views: 19.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/business_cases/1" for 127.0.0.1 at 2018-08-17 11:38:50 +0200
+Processing by BusinessCasesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBusinessCase Load (0.3ms)[0m  [1m[34mSELECT  "business_cases".* FROM "business_cases" WHERE "business_cases"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering business_cases/show.html.erb within layouts/application
+  Rendered business_cases/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 33ms (Views: 30.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/business_cases/1/edit" for 127.0.0.1 at 2018-08-17 11:41:28 +0200
+Processing by BusinessCasesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBusinessCase Load (0.1ms)[0m  [1m[34mSELECT  "business_cases".* FROM "business_cases" WHERE "business_cases"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering business_cases/edit.html.erb within layouts/application
+  Rendered business_cases/_form.html.erb (6.7ms)
+  Rendered business_cases/edit.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 23ms (Views: 21.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/business_cases/1/edit" for 127.0.0.1 at 2018-08-17 11:45:21 +0200
+Processing by BusinessCasesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBusinessCase Load (0.1ms)[0m  [1m[34mSELECT  "business_cases".* FROM "business_cases" WHERE "business_cases"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering business_cases/edit.html.erb within layouts/application
+  Rendered business_cases/edit.html.erb within layouts/application (1.6ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (Missing partial business_cases/_form, application/_form with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/home/elikhan/Projects/business_case/app/views"
+):
+    1: <h1>Editing Business Case</h1>
+    2: 
+    3: <%= render 'form', business_case: @business_case %>
+    4: 
+    5: <%= link_to 'Show', @business_case %> |
+    6: 
+  
+app/views/business_cases/edit.html.erb:3:in `_app_views_business_cases_edit_html_erb___2296109108993135540_70275775173480'
+Started GET "/business_cases/1/edit" for 127.0.0.1 at 2018-08-17 11:45:56 +0200
+Processing by BusinessCasesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBusinessCase Load (0.1ms)[0m  [1m[34mSELECT  "business_cases".* FROM "business_cases" WHERE "business_cases"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering business_cases/edit.html.erb within layouts/application
+  Rendered business_cases/_form_edit.html.erb (4.9ms)
+  Rendered business_cases/edit.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 21ms (Views: 19.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/business_cases" for 127.0.0.1 at 2018-08-17 11:46:21 +0200
+Processing by BusinessCasesController#index as HTML
+  Rendering business_cases/index.html.erb within layouts/application
+  [1m[36mBusinessCase Load (0.2ms)[0m  [1m[34mSELECT "business_cases".* FROM "business_cases"[0m
+  Rendered business_cases/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 17ms (Views: 16.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/business_cases/new" for 127.0.0.1 at 2018-08-17 11:46:24 +0200
+Processing by BusinessCasesController#new as HTML
+  Rendering business_cases/new.html.erb within layouts/application
+  Rendered business_cases/_form_new.html.erb (4.2ms)
+  Rendered business_cases/new.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 17ms (Views: 16.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/business_cases" for 127.0.0.1 at 2018-08-17 11:46:31 +0200
+Processing by BusinessCasesController#index as HTML
+  Rendering business_cases/index.html.erb within layouts/application
+  [1m[36mBusinessCase Load (0.2ms)[0m  [1m[34mSELECT "business_cases".* FROM "business_cases"[0m
+  Rendered business_cases/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 19ms (Views: 17.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/business_cases/new" for 127.0.0.1 at 2018-08-17 11:47:00 +0200
+Processing by BusinessCasesController#new as HTML
+  Rendering business_cases/new.html.erb within layouts/application
+  Rendered business_cases/_form_new.html.erb (22.0ms)
+  Rendered business_cases/new.html.erb within layouts/application (24.3ms)
+Completed 200 OK in 48ms (Views: 44.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/business_cases" for 127.0.0.1 at 2018-08-17 11:47:55 +0200
+Processing by BusinessCasesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"p2VCfUP36JIkXeRtUT5nVZ70zuEPBaayG/ivviZIFJEGpH5vBtWD/45/X/POjO/SI0ETDrC8Lri8C6iqM9gR2Q==", "business_case"=>{"title"=>"Comment destroy un bizcase ?", "client_location"=>"Europe", "client_industry"=>"Assurance", "client_size"=>"1-10m", "client_position"=>"CFO", "user_expertise"=>"Strategie", "client_problem"=>"Detruire", "user_methodology"=>"Destroy", "client_results"=>"A pu le fichier", "client_comments"=>"JE peux plus rien dire", "user_link"=>"Il est pu la"}, "commit"=>"Créer le business case"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "business_cases" ("client_location", "client_industry", "client_size", "user_expertise", "client_problem", "user_methodology", "client_results", "client_comments", "user_link", "title", "client_position", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["client_location", "Europe"], ["client_industry", "Assurance"], ["client_size", "1-10m"], ["user_expertise", "Strategie"], ["client_problem", "Detruire"], ["user_methodology", "Destroy"], ["client_results", "A pu le fichier"], ["client_comments", "JE peux plus rien dire"], ["user_link", "Il est pu la"], ["title", "Comment destroy un bizcase ?"], ["client_position", "CFO"], ["created_at", "2018-08-17 09:47:55.290988"], ["updated_at", "2018-08-17 09:47:55.290988"]]
+  [1m[35m (231.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/business_cases/3
+Completed 302 Found in 238ms (ActiveRecord: 232.5ms)
+
+
+Started GET "/business_cases/3" for 127.0.0.1 at 2018-08-17 11:47:55 +0200
+Processing by BusinessCasesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mBusinessCase Load (0.1ms)[0m  [1m[34mSELECT  "business_cases".* FROM "business_cases" WHERE "business_cases"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering business_cases/show.html.erb within layouts/application
+  Rendered business_cases/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 15ms (Views: 13.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/business_cases" for 127.0.0.1 at 2018-08-17 11:47:59 +0200
+Processing by BusinessCasesController#index as HTML
+  Rendering business_cases/index.html.erb within layouts/application
+  [1m[36mBusinessCase Load (0.2ms)[0m  [1m[34mSELECT "business_cases".* FROM "business_cases"[0m
+  Rendered business_cases/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 16ms (Views: 14.7ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/business_cases/3" for 127.0.0.1 at 2018-08-17 11:48:05 +0200
+Processing by BusinessCasesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"NPQ+7RcCl4/JIf2hRO/aBA49JhYyyUQYe4C9zUi9Z+KS4+0eASOfW02R4haUtn1CPFnb3Ow3pFSTaJd+jS1caQ==", "id"=>"3"}
+  [1m[36mBusinessCase Load (0.1ms)[0m  [1m[34mSELECT  "business_cases".* FROM "business_cases" WHERE "business_cases"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[31mDELETE FROM "business_cases" WHERE "business_cases"."id" = ?[0m  [["id", 3]]
+  [1m[35m (141.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/business_cases
+Completed 302 Found in 146ms (ActiveRecord: 142.7ms)
+
+
+Started GET "/business_cases" for 127.0.0.1 at 2018-08-17 11:48:06 +0200
+Processing by BusinessCasesController#index as HTML
+  Rendering business_cases/index.html.erb within layouts/application
+  [1m[36mBusinessCase Load (0.2ms)[0m  [1m[34mSELECT "business_cases".* FROM "business_cases"[0m
+  Rendered business_cases/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 14ms (Views: 12.2ms | ActiveRecord: 0.2ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUser (20180817095653)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "mail" varchar)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180817095653"]]
+  [1m[35m (143.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mBusinessCase Load (0.2ms)[0m  [1m[34mSELECT  "business_cases".* FROM "business_cases" ORDER BY "business_cases"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mBusinessCase Load (0.2ms)[0m  [1m[34mSELECT  "business_cases".* FROM "business_cases" ORDER BY "business_cases"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mBusinessCase Load (0.2ms)[0m  [1m[34mSELECT  "business_cases".* FROM "business_cases" ORDER BY "business_cases"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."business_case_id" = ? LIMIT ?[0m  [["business_case_id", 1], ["LIMIT", 11]]
+  [1m[36mBusinessCase Load (0.2ms)[0m  [1m[34mSELECT  "business_cases".* FROM "business_cases" ORDER BY "business_cases"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mBusinessCase Load (0.2ms)[0m  [1m[34mSELECT  "business_cases".* FROM "business_cases" ORDER BY "business_cases"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mBusinessCase Load (0.2ms)[0m  [1m[34mSELECT  "business_cases".* FROM "business_cases" ORDER BY "business_cases"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."business_case_id" = ? LIMIT ?[0m  [["business_case_id", 1], ["LIMIT", 11]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUser (20180817095653)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE "users"[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20180817095653"]]
+  [1m[35m (104.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20180817102917)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar, "business_cases_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_2f08c80f32"
+FOREIGN KEY ("business_cases_id")
+  REFERENCES "business_cases" ("id")
+)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_users_on_business_cases_id" ON "users" ("business_cases_id")[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180817102917"]]
+  [1m[35m (89.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (4.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_business_cases_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_business_cases_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20180817102917)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.7ms)[0m  [1m[35mDROP TABLE "users"[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20180817102917"]]
+  [1m[35m (108.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20180817102917)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180817102917"]]
+  [1m[35m (82.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mBusinessCase Load (0.1ms)[0m  [1m[34mSELECT  "business_cases".* FROM "business_cases" ORDER BY "business_cases"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."business_case_id" = ? LIMIT ?[0m  [["business_case_id", 1], ["LIMIT", 11]]
+  [1m[36mBusinessCase Load (0.6ms)[0m  [1m[34mSELECT  "business_cases".* FROM "business_cases" ORDER BY "business_cases"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mBusinessCase Load (0.3ms)[0m  [1m[34mSELECT  "business_cases".* FROM "business_cases" ORDER BY "business_cases"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."business_case_id" = ? LIMIT ?[0m  [["business_case_id", 1], ["LIMIT", 11]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "users" ("email", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["email", "email"], ["created_at", "2018-08-17 10:35:59.034550"], ["updated_at", "2018-08-17 10:35:59.034550"]]
+  [1m[35m (116.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBusinessCase Load (0.2ms)[0m  [1m[34mSELECT  "business_cases".* FROM "business_cases" ORDER BY "business_cases"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."business_case_id" = ? LIMIT ?[0m  [["business_case_id", 1], ["LIMIT", 11]]
+Started GET "/business_cases/new" for 127.0.0.1 at 2018-08-17 12:37:08 +0200
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BusinessCasesController#new as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/elikhan/Projects/business_case/app/models/business_case.rb:17: syntax error, unexpected ':'
+  has_many :users; class: User
+                        ^):
+  
+app/models/business_case.rb:17: syntax error, unexpected ':'
+app/controllers/business_cases_controller.rb:15:in `new'
+Started GET "/business_cases/new" for 127.0.0.1 at 2018-08-17 12:37:37 +0200
+Processing by BusinessCasesController#new as HTML
+Completed 500 Internal Server Error in 1ms
+
+
+  
+SyntaxError (/home/elikhan/Projects/business_case/app/models/business_case.rb:17: syntax error, unexpected ':', expecting keyword_end
+  has_many: :users
+          ^):
+  
+app/models/business_case.rb:17: syntax error, unexpected ':', expecting keyword_end
+app/controllers/business_cases_controller.rb:15:in `new'
+Started GET "/business_cases/new" for 127.0.0.1 at 2018-08-17 12:37:38 +0200
+Processing by BusinessCasesController#new as HTML
+Completed 500 Internal Server Error in 2ms
+
+
+  
+SyntaxError (/home/elikhan/Projects/business_case/app/models/business_case.rb:17: syntax error, unexpected ':', expecting keyword_end
+  has_many: :users
+          ^):
+  
+app/models/business_case.rb:17: syntax error, unexpected ':', expecting keyword_end
+app/controllers/business_cases_controller.rb:15:in `new'
+Started GET "/business_cases/new" for 127.0.0.1 at 2018-08-17 12:37:46 +0200
+Processing by BusinessCasesController#new as HTML
+  Rendering business_cases/new.html.erb within layouts/application
+  Rendered business_cases/_form_new.html.erb (6.1ms)
+  Rendered business_cases/new.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 44ms (Views: 19.9ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/business_cases" for 127.0.0.1 at 2018-08-17 12:38:11 +0200
+Processing by BusinessCasesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Dz34k46YgQzRSUzeih1PLaldATuyqo88EZw7Qsxz5uepKitgmLmJ2FX5U2laROhrmzn88WxUb3D5dBHxCePdbA==", "business_case"=>{"title"=>"", "client_location"=>"France", "client_industry"=>"Agro-alimentaire et boissons", "client_size"=>"0-1m", "client_position"=>"CEO", "user_expertise"=>"Finance", "client_problem"=>"sdfssdfsd", "user_methodology"=>"sdfsd", "client_results"=>"sdfsd", "client_comments"=>"dfdgd", "user_link"=>"é\"'é\"("}, "commit"=>"Créer le business case"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering business_cases/new.html.erb within layouts/application
+  Rendered business_cases/_form_new.html.erb (4.6ms)
+  Rendered business_cases/new.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 22ms (Views: 19.4ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/business_cases" for 127.0.0.1 at 2018-08-17 12:38:34 +0200
+Processing by BusinessCasesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vjOLrVhZ924TTbHgFrgo7G93rpz6y5jG7E9uuMaEeuEYJFheTnj/upf9rlfG4Y+qXRNTViQ1eIoEp0QLAxRBag==", "business_case"=>{"title"=>"Comment user", "client_location"=>"France", "client_industry"=>"Agro-alimentaire et boissons", "client_size"=>"0-1m", "client_position"=>"CEO", "user_expertise"=>"Finance", "client_problem"=>"sdfssdfsd", "user_methodology"=>"sdfsd", "client_results"=>"sdfsd", "client_comments"=>"dfdgd", "user_link"=>"é\"'é\"("}, "commit"=>"Créer le business case"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "business_cases" ("client_location", "client_industry", "client_size", "user_expertise", "client_problem", "user_methodology", "client_results", "client_comments", "user_link", "title", "client_position", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["client_location", "France"], ["client_industry", "Agro-alimentaire et boissons"], ["client_size", "0-1m"], ["user_expertise", "Finance"], ["client_problem", "sdfssdfsd"], ["user_methodology", "sdfsd"], ["client_results", "sdfsd"], ["client_comments", "dfdgd"], ["user_link", "é\"'é\"("], ["title", "Comment user"], ["client_position", "CEO"], ["created_at", "2018-08-17 10:38:34.675319"], ["updated_at", "2018-08-17 10:38:34.675319"]]
+  [1m[35m (166.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/business_cases/3
+Completed 302 Found in 171ms (ActiveRecord: 166.4ms)
+
+
+Started GET "/business_cases/3" for 127.0.0.1 at 2018-08-17 12:38:34 +0200
+Processing by BusinessCasesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mBusinessCase Load (0.6ms)[0m  [1m[34mSELECT  "business_cases".* FROM "business_cases" WHERE "business_cases"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering business_cases/show.html.erb within layouts/application
+  Rendered business_cases/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 19ms (Views: 15.3ms | ActiveRecord: 0.6ms)
+
+
+  [1m[36mBusinessCase Load (0.2ms)[0m  [1m[34mSELECT  "business_cases".* FROM "business_cases" ORDER BY "business_cases"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."business_case_id" = ? LIMIT ?[0m  [["business_case_id", 3], ["LIMIT", 11]]
+  [1m[36mBusinessCase Load (0.2ms)[0m  [1m[34mSELECT  "business_cases".* FROM "business_cases" ORDER BY "business_cases"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (8.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."business_case_id" = ? LIMIT ?[0m  [["business_case_id", 3], ["LIMIT", 11]]
+  [1m[36mBusinessCase Load (0.1ms)[0m  [1m[34mSELECT  "business_cases".* FROM "business_cases" ORDER BY "business_cases"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."business_case_id" = ? LIMIT ?[0m  [["business_case_id", 3], ["LIMIT", 11]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20180817102917)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE "users"[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20180817102917"]]
+  [1m[35m (75.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20180817104357)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar, "business_case_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_f8cbb9ecc4"
+FOREIGN KEY ("business_case_id")
+  REFERENCES "business_cases" ("id")
+)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_users_on_business_case_id" ON "users" ("business_case_id")[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180817104357"]]
+  [1m[35m (82.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_business_case_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_business_case_id' AND type='index'
+[0m
+  [1m[36mBusinessCase Load (0.2ms)[0m  [1m[34mSELECT  "business_cases".* FROM "business_cases" ORDER BY "business_cases"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."business_case_id" = ? LIMIT ?[0m  [["business_case_id", 1], ["LIMIT", 11]]
+Started GET "/business_cases/3" for 127.0.0.1 at 2018-08-17 12:47:17 +0200
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BusinessCasesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mBusinessCase Load (0.3ms)[0m  [1m[34mSELECT  "business_cases".* FROM "business_cases" WHERE "business_cases"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering business_cases/show.html.erb within layouts/application
+  Rendered business_cases/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 36ms (Views: 13.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/business_cases" for 127.0.0.1 at 2018-08-17 12:47:35 +0200
+Processing by BusinessCasesController#index as HTML
+  Rendering business_cases/index.html.erb within layouts/application
+  [1m[36mBusinessCase Load (0.2ms)[0m  [1m[34mSELECT "business_cases".* FROM "business_cases"[0m
+  Rendered business_cases/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 18ms (Views: 16.7ms | ActiveRecord: 0.2ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20180817104357)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE "users"[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20180817104357"]]
+  [1m[35m (152.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20180817104357)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180817104357"]]
+  [1m[35m (94.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddUserToBusinessCases (20180817105229)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[35mALTER TABLE "business_cases" ADD "user_id" integer[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_business_cases_on_user_id" ON "business_cases" ("user_id")[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180817105229"]]
+  [1m[35m (117.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_business_cases_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_business_cases_on_user_id' AND type='index'
+[0m
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["email", "seb@gmail.com"], ["created_at", "2018-08-17 10:55:31.900900"], ["updated_at", "2018-08-17 10:55:31.900900"]]
+  [1m[35m (110.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mBusinessCase Load (0.2ms)[0m  [1m[34mSELECT  "business_cases".* FROM "business_cases" WHERE "business_cases"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 11]]
+  [1m[36mBusinessCase Load (0.2ms)[0m  [1m[34mSELECT  "business_cases".* FROM "business_cases" ORDER BY "business_cases"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[33mUPDATE "business_cases" SET "updated_at" = ?, "user_id" = ? WHERE "business_cases"."id" = ?[0m  [["updated_at", "2018-08-17 10:59:17.176170"], ["user_id", 1], ["id", 1]]
+  [1m[35m (100.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBusinessCase Load (0.2ms)[0m  [1m[34mSELECT  "business_cases".* FROM "business_cases" WHERE "business_cases"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 11]]
+  [1m[36mBusinessCase Load (0.1ms)[0m  [1m[34mSELECT  "business_cases".* FROM "business_cases" WHERE "business_cases"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 11]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "business_cases" WHERE "business_cases"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "business_cases"[0m
+  [1m[36mBusinessCase Load (0.3ms)[0m  [1m[34mSELECT  "business_cases".* FROM "business_cases" WHERE "business_cases"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mBusinessCase Load (0.1ms)[0m  [1m[34mSELECT  "business_cases".* FROM "business_cases" WHERE "business_cases"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 11]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "business_cases" SET "updated_at" = ?, "user_id" = ? WHERE "business_cases"."id" = ?[0m  [["updated_at", "2018-08-17 11:02:03.311439"], ["user_id", 1], ["id", 2]]
+  [1m[35m (90.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBusinessCase Load (0.2ms)[0m  [1m[34mSELECT  "business_cases".* FROM "business_cases" WHERE "business_cases"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 11]]
+Started GET "/business_cases" for 127.0.0.1 at 2018-08-17 13:05:56 +0200
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BusinessCasesController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering business_cases/index.html.erb within layouts/application
+  [1m[36mBusinessCase Load (0.4ms)[0m  [1m[34mSELECT "business_cases".* FROM "business_cases" WHERE "business_cases"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered business_cases/index.html.erb within layouts/application (20.6ms)
+Completed 200 OK in 56ms (Views: 33.6ms | ActiveRecord: 1.7ms)
+
+
