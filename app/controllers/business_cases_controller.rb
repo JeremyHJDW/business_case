@@ -3,8 +3,8 @@ class BusinessCasesController < ApplicationController
 
   # GET /business_cases
   def index
-    # @business_cases = BusinessCase.all
-    @business_cases = User.first.business_cases
+    @business_cases = BusinessCase.all
+    # @business_cases = User.first.business_cases
   end
 
   # GET /business_cases/1
