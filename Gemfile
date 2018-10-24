@@ -42,6 +42,8 @@ group :development, :test do
   gem 'factory_bot_rails', '~> 4.11', '>= 4.11.1'
   gem 'rspec-rails', '~> 3.7', '>= 3.7.2'
   gem 'selenium-webdriver'
+  gem 'rails-controller-testing'
+  gem 'pry-byebug'
 end
 
 group :development do
