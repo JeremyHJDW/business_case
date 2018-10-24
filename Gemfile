@@ -58,3 +58,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'devise', '~> 4.5'
 gem 'spring-commands-rspec', group: :development
+gem 'factory_bot_rails', '~> 4.11', '>= 4.11.1'
