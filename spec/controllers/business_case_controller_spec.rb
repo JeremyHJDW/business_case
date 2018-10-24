@@ -7,8 +7,14 @@ RSpec.describe BusinessCasesController, type: :controller do
     create(:valid_business_case)
   end
 
+  let(:business_cases) do
+    create_list(:multiple_business_cases, 3)
+  end
+
   describe 'GET #index' do
+    render_views
     it 'returns a 200 custom status code' do
+      business_cases
       get :index
       expect(response).to have_http_status(200)
     end
