@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 class BusinessCasesController < ApplicationController
+  before_action :authenticate_user!, only: %i[new show create edit update destroy]
   before_action :set_business_case, only: %i[show edit update destroy]
 
   # GET /business_cases
@@ -17,11 +18,13 @@ class BusinessCasesController < ApplicationController
   end
 
   # GET /business_cases/1/edit
-  def edit; end
+  def edit
+  end
 
   # POST /business_cases
   def create
     @business_case = BusinessCase.new(business_case_params)
+    @business_case.update(user: current_user)
     respond_to do |format|
       if @business_case.save
         format.html { redirect_to @business_case, notice: 'Business case was successfully created.' }
@@ -56,23 +59,24 @@ class BusinessCasesController < ApplicationController
 
   # Use callbacks to share common setup or constraints between actions.
   def set_business_case
-    @business_case = BusinessCase.find(params[:id])
+    redirect_to business_cases_url, notice: 'Business case was not found.' unless current_user
+    @business_case = current_user.business_cases.find(params[:id]) if current_user
   end
 
-  # Never trust parameters from the scary internet, only allow the white list through.
-  def business_case_params
-    params.require(:business_case).permit(
-      :client_location,
-      :client_industry,
-      :client_size,
-      :user_expertise,
-      :client_problem,
-      :user_methodology,
-      :client_results,
-      :client_comments,
-      :user_link,
-      :title,
-      :client_position
-    )
-  end
+# Never trust parameters from the scary internet, only allow the white list through.
+def business_case_params
+  params.require(:business_case).permit(
+    :client_location,
+    :client_industry,
+    :client_size,
+    :user_expertise,
+    :client_problem,
+    :user_methodology,
+    :client_results,
+    :client_comments,
+    :user_link,
+    :title,
+    :client_position
+  )
+end
 end
