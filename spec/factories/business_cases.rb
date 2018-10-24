@@ -1,5 +1,5 @@
 FactoryBot.define do
-  factory :business_case, class: BusinessCase do
+  factory :empty_business_case, class: BusinessCase do
   end
   factory :valid_business_case, class: BusinessCase do
     title { "Comment tester" }
