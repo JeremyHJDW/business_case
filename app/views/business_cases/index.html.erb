@@ -1,28 +1,35 @@
-<h1>Business Cases</h1>
-
+<h1>Mes business cases</h1>
+<br>
 <% unless @business_cases.empty? %>
-  <table>
+  <table class="table">
     <thead>
       <tr>
-        <th>Title</th>
-        <th>Client validation</th>
-        <th colspan="3"></th>
+        <th scope="col">Titre</th>
+        <th scope="col">Statut</th>
+        <th scope="col">Date de modification</th>
+        <th scope="col">Vues</th>
+        <th scope="col">Clics</th>
+        <th scope="col">Validation client</th>
+        <th scope="col" colspan="3"></th>
       </tr>
     </thead>
 
-    <tbody>
+    <tbody class="business_case_listing">
       <% @business_cases.each do |business_case| %>
-        <tr>
+        <tr class="business_case_details">
           <td><%= link_to business_case.title, business_case %></td></td>
-          <td><%= business_case.client_validation_status %></td>
-          
-          <td><%= link_to 'Edit', edit_business_case_path(business_case) %></td>
-          <td><%= link_to 'Destroy', business_case, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <td><%= business_case_status(business_case) %></td>
+          <td><%= business_case.updated_at.strftime('%d/%m/%y %Hh%M') %></td>
+          <td>N/A</td>
+          <td>N/A</td>
+          <td><%= validation_status(business_case) %></td>
+          <td><% link_to 'Edit', edit_business_case_path(business_case) %></td>
+          <td><% link_to 'Destroy', business_case, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         </tr>
       <% end %>
     </tbody>
   </table>
-  <%= link_to 'Nouveau Business Case', new_business_case_path %>
+  <%= link_to 'Nouveau Business Case', new_business_case_path, class: "btn btn-primary" %>
 
   <br>
 
