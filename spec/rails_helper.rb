@@ -3,6 +3,7 @@
 # This file is copied to spec/ when you run 'rails generate rspec:install'
 require 'spec_helper'
 require 'support/controller_helpers'
+require 'support/authentication_helpers'
 require 'capybara/rails'
 
 
@@ -64,6 +65,7 @@ RSpec.configure do |config|
   config.include FactoryBot::Syntax::Methods
   config.include Devise::Test::ControllerHelpers, :type => :controller
   config.include ControllerHelpers, :type => :controller
+  config.include AuthenticationHelpers, :type => :feature
 
   config.use_transactional_fixtures = false
 
