@@ -1,0 +1,38 @@
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+<div id="flipkart-navbar">
+  <div class="container">
+    <div class="row row1">
+      <ul class="largenav pull-right">
+        <%if user_signed_in? %>
+          <li class="upper-links">
+            <%= link_to('Se déconnecter', destroy_user_session_path, method: :delete, class: 'links') %>
+          </li>
+        <% else %>
+          <li class="upper-links">
+            <%= link_to('Se connecter', new_user_session_path, class: 'links') %>  
+          </li>
+          <li class="upper-links">
+            <%= link_to('Créer compte', new_user_registration_path, class: 'links') %>  
+          </li>
+        <% end %>
+    </div>
+    <div class="row row2">
+      <div class="col-sm-12">
+        <h2 style="margin:0px;"><span class="smallnav menu" onclick="openNav()">☰ Brand</span></h2>
+        <h1 style="margin:0px;"><span class="largenav">Business Case</span></h1>
+      </div>
+      <div class="cart largenav col-sm-2">
+      </div>
+    </div>
+  </div>
+</div>
+<div id="mySidenav" class="sidenav">
+  <div class="container" style="background-color: #2874f0; padding-top: 10px;">
+    <span class="sidenav-heading">Home</span>
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+  </div>
+  <a href="http://clashhacks.in/">Link</a>
+  <a href="http://clashhacks.in/">Link</a>
+  <a href="http://clashhacks.in/">Link</a>
+  <a href="http://clashhacks.in/">Link</a>
+</div>
