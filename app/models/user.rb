@@ -10,4 +10,5 @@ class User < ApplicationRecord
   #:confirmable
 
   has_many :business_cases
+  validates :first_name, presence: true
 end
