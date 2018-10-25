@@ -119,12 +119,5 @@ RSpec.describe BusinessCase, type: :model do
       business_case.valid?
       expect(business_case).to be_valid
     end
-    # invalid_business_case.pending!
-    # expect(invalid_business_case.client_validation_status).to eq("pending")
-
-    # it "changes comment status" do
-    #   invalid_business_case.comment_pending!
-    #   expect(invalid_business_case.client_comment_status).to eq "pending"
-    # end
   end
 end
