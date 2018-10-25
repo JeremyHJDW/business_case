@@ -6,7 +6,7 @@ class BusinessCasesController < ApplicationController
 
   # GET /business_cases
   def index
-    @business_cases = BusinessCase.all
+    @business_cases = current_user.business_cases
   end
 
   # GET /business_cases/1
