@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class BusinessCasesController < ApplicationController
-  before_action :authenticate_user!, only: %i[new show create edit update destroy]
+  before_action :authenticate_user!, only: %i[index new show create edit update destroy]
   before_action :set_business_case, only: %i[show edit update destroy]
 
   # GET /business_cases
