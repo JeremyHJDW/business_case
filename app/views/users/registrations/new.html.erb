@@ -1,9 +1,10 @@
+<br>
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
 <div class="container register-form">
   <div class="form">
     <div class="note">
-      <p>This is a simpleRegister Form made using Boostrap.</p>
+      <p>Créer un nouveau compte</p>
     </div>
 
     <div class="form-content">
@@ -25,7 +26,7 @@
           </div>
         </div>
       </div>
-      <%= f.submit "Sign up", class: 'btnSubmit' %>
+      <%= f.submit "Valider", class: 'btnSubmit' %>
     </div>
   </div>
 </div>
